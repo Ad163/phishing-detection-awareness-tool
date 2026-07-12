@@ -1,0 +1,4 @@
+split,n_rows,n_phishing_label1,n_legitimate_label0,pct_phishing
+train,57411,29979,27432,52.22
+val,12302,6424,5878,52.22
+test,12303,6424,5879,52.21

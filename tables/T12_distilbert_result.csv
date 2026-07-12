@@ -1,0 +1,2 @@
+model,precision,recall,f1_score,auc_roc
+DistilBERT (fine-tuned),0.9956,0.9953,0.9955,0.9998

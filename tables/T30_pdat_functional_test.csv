@@ -1,0 +1,41 @@
+id,label,actual_type,predicted_verdict,confidence,correct,response_time_s
+P1,Microsoft Account — Password Reset,Phishing,Phishing,1.0,True,25.3
+P2,University IT — Account Deactivation Warning,Phishing,Phishing,0.9998,True,22.8
+P3,PayPal — Unusual Activity Alert,Phishing,Phishing,1.0,True,24.4
+P4,Student Finance — Bank Details Update,Phishing,Phishing,1.0,True,22.4
+P5,Netflix — Membership Payment Failure,Phishing,Phishing,0.9987,True,18.1
+P6,HMRC — Tax Refund Claim,Phishing,Phishing,0.7912,True,25.5
+P7,DHL — Customs Fee Outstanding,Phishing,Phishing,0.9979,True,21.3
+P8,Barclays — Account Locked,Phishing,Phishing,1.0,True,22.1
+P9,Spotify — Premium Subscription Cancelled,Phishing,Phishing,0.9993,True,21.9
+P10,NHS — Appointment Confirmation Requesting Details,Phishing,Phishing,0.9982,True,19.3
+P11,Apple ID — Account Suspended,Phishing,Phishing,0.9956,True,26.5
+P12,UCAS — Offer Confirmation Requiring NI Number,Phishing,Phishing,0.9518,True,24.0
+P13,Academic Integrity — Plagiarism Investigation,Phishing,Phishing,0.9991,True,26.3
+P14,Instagram — Password Changed Alert,Phishing,Phishing,0.9856,True,19.4
+P15,Evri — Missed Delivery Redelivery Fee,Phishing,Phishing,0.9975,True,24.9
+P16,Council Tax — Reduction Rebate Offer,Phishing,Phishing,0.9997,True,23.7
+P17,WhatsApp — Account Registered on New Device,Phishing,Phishing,0.9679,True,19.4
+P18,BT — Exclusive Full Fibre Upgrade Offer,Phishing,Phishing,0.9953,True,22.3
+P19,Graduate Job Offer — Immediate Bank Details Requested,Phishing,Phishing,0.9998,True,21.7
+P20,Amazon — Prize Winner Notification,Phishing,Phishing,0.9987,True,22.5
+L1,Google Docs — File Share Notification,Legitimate,Legitimate,0.9999,True,20.2
+L2,Amazon — Order Dispatched Confirmation,Legitimate,Legitimate,0.9943,True,20.9
+L3,LinkedIn — Connection Invitation,Legitimate,Legitimate,0.9944,True,20.4
+L4,Zoom — Tutorial Meeting Invitation,Legitimate,Phishing,0.749,False,21.2
+L5,University Library — Book Return Reminder,Legitimate,Phishing,0.9954,False,31.0
+L6,GitHub — Pull Request Review Request,Legitimate,Legitimate,0.9999,True,26.2
+L7,Spotify — Monthly Subscription Receipt,Legitimate,Phishing,0.9995,False,21.5
+L8,NHS — Appointment Reminder,Legitimate,Phishing,0.9977,False,21.9
+L9,Canvas — Assignment Feedback Notification,Legitimate,Legitimate,0.8418,True,20.7
+L10,UCAS Track — University Application Decision,Legitimate,Legitimate,0.7385,True,22.2
+L11,Microsoft Teams — Meeting Invitation,Legitimate,Phishing,0.8861,False,22.5
+L12,Sunderland Students' Union — Weekly Update,Legitimate,Phishing,0.73,False,25.5
+L13,Indeed — Saved Job Search Alert,Legitimate,Legitimate,0.9983,True,24.8
+L14,Apple — App Store Purchase Receipt,Legitimate,Phishing,0.9973,False,23.0
+L15,Google — Monthly Account Security Summary,Legitimate,Phishing,0.9998,False,22.7
+L16,eBay — Auction Won Notification,Legitimate,Phishing,0.981,False,24.6
+L17,Dropbox — Classmate File Request,Legitimate,Legitimate,0.9968,True,21.1
+L18,Grammarly — Weekly Writing Stats Report,Legitimate,Legitimate,0.9995,True,20.8
+L19,Sport Sunderland — Fitness Suite Booking Confirmed,Legitimate,Phishing,0.9992,False,22.0
+L20,Turnitin — Assignment Submission Receipt,Legitimate,Phishing,0.9564,False,23.2

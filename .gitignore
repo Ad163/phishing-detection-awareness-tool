@@ -1,0 +1,32 @@
+# Environment
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Large data files (third-party downloads, not authored content)
+data/raw/
+data/*.csv
+data/interim/
+data/processed/
+
+# Large trained model artefacts (exceed GitHub's file size limits anyway)
+# Leading slash anchors to repo root -- do not match nested src/models/
+/models/
+
+# Participant data -- must never be committed, even accidentally, even header-only
+/study/responses/
+
+# Dissertation submission documents and materials with personal contact details
+# (kept in the private project folder, not the code repository)
+# Leading slash anchors to repo root -- do not match nested src/writing/
+/writing/
+/study/consent_ethics/
+/references/
+80_References_Harvard.docx
+Info.docx
+PROM02*.docx
+
+# OS
+.DS_Store
+Thumbs.db

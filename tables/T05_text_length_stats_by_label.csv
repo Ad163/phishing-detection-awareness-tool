@@ -1,0 +1,5 @@
+,_text_len_chars,_text_len_chars,_text_len_chars,_text_len_chars,_text_len_chars,_text_len_chars,_text_len_chars,_text_len_chars,_text_len_words,_text_len_words,_text_len_words,_text_len_words,_text_len_words,_text_len_words,_text_len_words,_text_len_words
+,count,mean,std,min,25%,50%,75%,max,count,mean,std,min,25%,50%,75%,max
+label,,,,,,,,,,,,,,,,
+0,39595.0,1536.1,3695.9,11.0,411.0,779.0,1493.0,160318.0,39595.0,203.2,479.2,2.0,57.0,106.0,203.0,23359.0
+1,42891.0,1060.4,21192.7,1.0,241.0,391.0,1058.0,4279526.0,42891.0,121.3,594.5,0.0,32.0,55.0,154.0,107710.0

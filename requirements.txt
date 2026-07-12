@@ -1,0 +1,26 @@
+# Core data/EDA stack — installed now
+pandas>=2.2
+numpy>=1.26
+matplotlib>=3.8
+seaborn>=0.13
+scipy>=1.12
+scikit-learn>=1.4
+python-docx>=1.1
+openpyxl>=3.1
+requests>=2.31
+jupyter>=1.0
+
+# Objective O3 -- PDAT prototype (installed 12 July 2026)
+torch>=2.2
+transformers>=4.40
+lime>=0.2
+flask>=3.0
+gunicorn>=21.2
+
+# Objective O4 -- evaluation study (optional Google Sheets mirror, same pattern as Assignment 6)
+gspread>=6.1
+google-auth>=2.29
+
+# Added later:
+# shap                           -> alternative/supplementary explainability, not primary
+# pingouin or statsmodels        -> paired t-tests / effect sizes for the evaluation study

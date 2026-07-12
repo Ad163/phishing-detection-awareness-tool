@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Phishing Detection Study — Part 1 &amp; 2</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --bg: #f7f6f2; --card: #ffffff; --ink: #1a1a2e; --muted: #6b7280;
+    --accent: #2563eb; --accent-light: #eff6ff;
+    --success: #059669; --success-light: #ecfdf5;
+    --danger: #dc2626; --danger-light: #fef2f2;
+    --border: #e5e7eb; --radius: 12px; --shadow: 0 4px 24px rgba(0,0,0,0.08);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--ink); min-height: 100vh; padding: 0 0 80px; }
+  .container { max-width: 720px; margin: 0 auto; padding: 40px 20px 0; }
+  .screen { display: none; animation: fadeUp .3s ease; }
+  .screen.active { display: block; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+  .display { font-family: 'DM Serif Display', serif; font-size: 1.9rem; margin-bottom: 10px; }
+  .lead { color: var(--muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px; }
+  .section-label { font-size: 0.7rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
+  .card { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 30px; margin-bottom: 22px; border: 1px solid var(--border); }
+  label.field-label { display: block; font-size: 0.88rem; font-weight: 500; margin-bottom: 8px; }
+  select, input[type=text] { width: 100%; padding: 11px 14px; border: 1.5px solid var(--border); border-radius: 8px; font-family: inherit; font-size: 0.9rem; margin-bottom: 18px; }
+  .radio-group { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 18px; }
+  .radio-pill input, .likert-opt input { display: none; }
+  .radio-pill label, .likert-opt label {
+    padding: 8px 16px; border: 1.5px solid var(--border); border-radius: 999px; font-size: 0.85rem;
+    cursor: pointer; user-select: none; display: block;
+  }
+  .radio-pill input:checked + label, .likert-opt input:checked + label { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .likert { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 6px; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 26px; border-radius: 8px; font-size: 0.9rem; font-weight: 500; cursor: pointer; border: none; }
+  .btn-primary { background: var(--accent); color: #fff; }
+  .btn-primary:disabled { opacity: .5; cursor: not-allowed; }
+  .consent-box { background: #fffbeb; border: 1.5px solid #fcd34d; border-radius: 10px; padding: 18px 20px; font-size: 0.85rem; line-height: 1.7; margin-bottom: 16px; }
+  .consent-item { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 12px; }
+  .consent-item input { margin-top: 3px; }
+  .code-display { text-align: center; padding: 30px 20px; }
+  .code-value { font-family: 'DM Serif Display', serif; font-size: 2.6rem; letter-spacing: 0.15em; color: var(--accent); margin: 16px 0; }
+  .email-chrome { border: 1.5px solid var(--border); border-radius: 10px; overflow: hidden; margin-bottom: 20px; }
+  .email-body-text { padding: 20px; font-size: 0.88rem; line-height: 1.7; color: #374151; white-space: pre-wrap; max-height: 320px; overflow-y: auto; }
+  .verdict-btns { display: flex; gap: 14px; margin-top: 18px; }
+  .verdict-btn { flex: 1; padding: 15px; border-radius: 10px; font-size: 0.95rem; font-weight: 600; cursor: pointer; border: 2px solid transparent; }
+  .verdict-btn.phishing { background: var(--danger-light); border-color: var(--danger); color: var(--danger); }
+  .verdict-btn.legitimate { background: var(--success-light); border-color: var(--success); color: var(--success); }
+  .verdict-btn:disabled { opacity: .4; cursor: not-allowed; }
+  .step-badge { background: var(--accent-light); color: var(--accent); padding: 3px 12px; border-radius: 999px; font-weight: 600; font-size: 0.75rem; }
+  .slider-row { margin-bottom: 22px; }
+  .slider-row label { display: block; font-size: 0.88rem; font-weight: 500; margin-bottom: 4px; }
+  .slider-hint { font-size: 0.75rem; color: var(--muted); display: flex; justify-content: space-between; margin-bottom: 6px; }
+  input[type=range] { width: 100%; }
+  .explain-box { background: var(--accent-light); border-radius: 10px; padding: 18px 20px; margin-top: 14px; font-size: 0.88rem; line-height: 1.6; }
+  .hidden { display: none; }
+  .error-text { color: var(--danger); font-size: 0.85rem; margin-top: 8px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- SCREEN: CONSENT -->
+  <div class="screen active" id="screen-consent">
+    <p class="section-label">Research Study</p>
+    <h2 class="display">Phishing Detection &amp; Awareness Study</h2>
+    <p class="lead">This study is in two parts and takes about 20-25 minutes in total. Please read the Participant Information Sheet provided to you before continuing. All nine statements below must be checked to take part.</p>
+    <div class="consent-box">
+      <div class="consent-item"><input type="checkbox" class="consent-check"><label>I confirm I have read and understood the Participant Information Sheet.</label></div>
+      <div class="consent-item"><input type="checkbox" class="consent-check"><label>I understand participation is voluntary and I can withdraw at any time without giving a reason.</label></div>
+      <div class="consent-item"><input type="checkbox" class="consent-check"><label>I understand this study uses a mixture of genuine and simulated (fake) phishing emails for research purposes, and that no real phishing or data request is involved.</label></div>
+      <div class="consent-item"><input type="checkbox" class="consent-check"><label>I understand I will be given an anonymous code at the end of Part 1 which I must keep and re-enter to complete Part 2.</label></div>
+      <div class="consent-item"><input type="checkbox" class="consent-check"><label>I understand no name, email, or other identifying information will be collected.</label></div>
+      <div class="consent-item"><input type="checkbox" class="consent-check"><label>I understand my anonymised responses will be used for academic research, including the researcher's dissertation.</label></div>
+      <div class="consent-item"><input type="checkbox" class="consent-check"><label>I understand I can skip any question, and if I withdraw before finishing, my data will be deleted.</label></div>
+      <div class="consent-item"><input type="checkbox" class="consent-check"><label>I confirm I am 18 years of age or older.</label></div>
+      <div class="consent-item"><input type="checkbox" class="consent-check"><label>I agree to take part in this study.</label></div>
+    </div>
+    <button class="btn btn-primary" id="btnConsentContinue" disabled>Continue to Part 1 &rarr;</button>
+  </div>
+
+  <!-- SCREEN: DEMOGRAPHICS -->
+  <div class="screen" id="screen-demographics">
+    <p class="section-label">Part 1 of 2 — About You</p>
+    <h2 class="display">A few quick questions</h2>
+    <div class="card">
+      <label class="field-label">Age group</label>
+      <select id="age_group"><option value="">— Select —</option><option>18–21</option><option>22–25</option><option>26–30</option><option>31+</option></select>
+
+      <label class="field-label">Academic programme / field of study</label>
+      <select id="programme"><option value="">— Select —</option><option>Computer Science / IT / Cybersecurity</option><option>Engineering</option><option>Business / Management</option><option>Social Sciences / Humanities</option><option>Health / Medicine</option><option>Arts / Design / Media</option><option>Law</option><option>Other</option></select>
+
+      <label class="field-label">Year of study</label>
+      <select id="year_of_study"><option value="">— Select —</option><option>Year 1</option><option>Year 2</option><option>Year 3</option><option>Postgraduate</option><option>Other</option></select>
+
+      <label class="field-label">Have you received cybersecurity awareness training?</label>
+      <div class="radio-group" id="prior_training">
+        <div class="radio-pill"><input type="radio" name="pt" value="Yes" id="pt1"><label for="pt1">Yes — formal</label></div>
+        <div class="radio-pill"><input type="radio" name="pt" value="Partially" id="pt2"><label for="pt2">Partially</label></div>
+        <div class="radio-pill"><input type="radio" name="pt" value="No" id="pt3"><label for="pt3">No</label></div>
+      </div>
+
+      <label class="field-label">Have you personally received a phishing email before?</label>
+      <div class="radio-group" id="prior_phishing">
+        <div class="radio-pill"><input type="radio" name="pp" value="Yes" id="pp1"><label for="pp1">Yes</label></div>
+        <div class="radio-pill"><input type="radio" name="pp" value="No" id="pp2"><label for="pp2">No</label></div>
+        <div class="radio-pill"><input type="radio" name="pp" value="Not sure" id="pp3"><label for="pp3">Not sure</label></div>
+      </div>
+
+      <label class="field-label">Rate your own knowledge of phishing (1 = very low, 5 = expert)</label>
+      <div class="likert" id="self_knowledge">
+        <div class="likert-opt"><input type="radio" name="sk" value="1" id="sk1"><label for="sk1">1</label></div>
+        <div class="likert-opt"><input type="radio" name="sk" value="2" id="sk2"><label for="sk2">2</label></div>
+        <div class="likert-opt"><input type="radio" name="sk" value="3" id="sk3"><label for="sk3">3</label></div>
+        <div class="likert-opt"><input type="radio" name="sk" value="4" id="sk4"><label for="sk4">4</label></div>
+        <div class="likert-opt"><input type="radio" name="sk" value="5" id="sk5"><label for="sk5">5</label></div>
+      </div>
+    </div>
+    <button class="btn btn-primary" id="btnStartPretest">Start Pretest &rarr;</button>
+    <div class="error-text hidden" id="demoError">Please answer every question before continuing.</div>
+  </div>
+
+  <!-- SCREEN: PRETEST -->
+  <div class="screen" id="screen-pretest">
+    <span class="step-badge" id="pretestBadge">Email 1 of 5</span>
+    <h2 class="display" style="font-size:1.3rem;margin-top:10px;">Is this email Phishing or Legitimate?</h2>
+    <p class="lead">This is your baseline assessment — no feedback will be shown until the study is complete.</p>
+    <div class="card" style="padding:0;">
+      <div class="email-chrome"><div class="email-body-text" id="pretestEmailText"></div></div>
+    </div>
+    <div class="verdict-btns">
+      <button class="verdict-btn phishing" onclick="answerPretest('Phishing')">Phishing</button>
+      <button class="verdict-btn legitimate" onclick="answerPretest('Legitimate')">Legitimate</button>
+    </div>
+    <div class="card hidden" id="pretestConfidenceCard" style="margin-top:18px;">
+      <p style="font-weight:500;margin-bottom:10px;">How confident are you?</p>
+      <div class="likert" id="pretestConfidence">
+        <div class="likert-opt"><input type="radio" name="pconf" value="1" id="pc1"><label for="pc1">1</label></div>
+        <div class="likert-opt"><input type="radio" name="pconf" value="2" id="pc2"><label for="pc2">2</label></div>
+        <div class="likert-opt"><input type="radio" name="pconf" value="3" id="pc3"><label for="pc3">3</label></div>
+        <div class="likert-opt"><input type="radio" name="pconf" value="4" id="pc4"><label for="pc4">4</label></div>
+        <div class="likert-opt"><input type="radio" name="pconf" value="5" id="pc5"><label for="pc5">5</label></div>
+      </div>
+      <button class="btn btn-primary" style="margin-top:14px;" onclick="nextPretestEmail()">Next &rarr;</button>
+    </div>
+  </div>
+
+  <!-- SCREEN: CODE DISPLAY -->
+  <div class="screen" id="screen-code-display">
+    <div class="card code-display">
+      <p class="section-label">Part 1 complete</p>
+      <h2 class="display">Your participant code</h2>
+      <div class="code-value" id="codeValue">--------</div>
+      <p class="lead">Please write this code down now. You will need it to complete Part 2. It does not identify you personally.</p>
+      <button class="btn btn-primary" onclick="showScreen('screen-tool-intro')">Continue &rarr;</button>
+    </div>
+  </div>
+
+  <!-- SCREEN: TOOL INTRO -->
+  <div class="screen" id="screen-tool-intro">
+    <p class="section-label">Now try the tool</p>
+    <h2 class="display">Meet the Phishing Detection &amp; Awareness Tool</h2>
+    <p class="lead">You are about to see how the tool classifies the same emails you just judged yourself, along with its plain-language explanation for each decision. Take a moment to read each explanation.</p>
+    <button class="btn btn-primary" onclick="startToolInteraction()">Show Me &rarr;</button>
+  </div>
+
+  <!-- SCREEN: TOOL INTERACTION -->
+  <div class="screen" id="screen-tool-interaction">
+    <span class="step-badge" id="toolBadge">Tool result 1 of 5</span>
+    <div class="card">
+      <div class="email-chrome"><div class="email-body-text" id="toolEmailText"></div></div>
+      <div id="toolLoading" style="padding:16px;color:var(--muted);">Analyzing with the tool...</div>
+      <div id="toolResultBox" class="hidden">
+        <p style="font-weight:700;font-size:1.1rem;margin-top:14px;" id="toolVerdict"></p>
+        <div class="explain-box" id="toolSummary"></div>
+      </div>
+    </div>
+    <button class="btn btn-primary hidden" id="btnToolNext" onclick="nextToolEmail()">Next &rarr;</button>
+  </div>
+
+  <!-- SCREEN: CODE GATE -->
+  <div class="screen" id="screen-code-gate">
+    <p class="section-label">Part 2 of 2</p>
+    <h2 class="display">Enter your participant code</h2>
+    <p class="lead">Enter the code you were given at the end of Part 1 to continue.</p>
+    <div class="card">
+      <input type="text" id="codeInput" placeholder="e.g. AB3D9F2K" style="text-transform:uppercase;">
+      <button class="btn btn-primary" onclick="verifyCode()">Continue &rarr;</button>
+      <div class="error-text hidden" id="codeError"></div>
+    </div>
+  </div>
+
+  <!-- SCREEN: POSTTEST -->
+  <div class="screen" id="screen-posttest">
+    <span class="step-badge" id="posttestBadge">Email 1 of 5</span>
+    <h2 class="display" style="font-size:1.3rem;margin-top:10px;">Is this email Phishing or Legitimate?</h2>
+    <p class="lead">These are new emails you have not seen before.</p>
+    <div class="card" style="padding:0;">
+      <div class="email-chrome"><div class="email-body-text" id="posttestEmailText"></div></div>
+    </div>
+    <div class="verdict-btns">
+      <button class="verdict-btn phishing" onclick="answerPosttest('Phishing')">Phishing</button>
+      <button class="verdict-btn legitimate" onclick="answerPosttest('Legitimate')">Legitimate</button>
+    </div>
+    <div class="card hidden" id="posttestConfidenceCard" style="margin-top:18px;">
+      <p style="font-weight:500;margin-bottom:10px;">How confident are you?</p>
+      <div class="likert" id="posttestConfidence">
+        <div class="likert-opt"><input type="radio" name="poconf" value="1" id="poc1"><label for="poc1">1</label></div>
+        <div class="likert-opt"><input type="radio" name="poconf" value="2" id="poc2"><label for="poc2">2</label></div>
+        <div class="likert-opt"><input type="radio" name="poconf" value="3" id="poc3"><label for="poc3">3</label></div>
+        <div class="likert-opt"><input type="radio" name="poconf" value="4" id="poc4"><label for="poc4">4</label></div>
+        <div class="likert-opt"><input type="radio" name="poconf" value="5" id="poc5"><label for="poc5">5</label></div>
+      </div>
+      <button class="btn btn-primary" style="margin-top:14px;" onclick="nextPosttestEmail()">Next &rarr;</button>
+    </div>
+  </div>
+
+  <!-- SCREEN: SUS -->
+  <div class="screen" id="screen-sus">
+    <p class="section-label">Almost done</p>
+    <h2 class="display">Rate the tool</h2>
+    <p class="lead">Strongly Disagree (1) to Strongly Agree (5).</p>
+    <div class="card" id="susCard"></div>
+    <button class="btn btn-primary" id="btnSusContinue" disabled onclick="showScreen('screen-tlx')">Continue &rarr;</button>
+  </div>
+
+  <!-- SCREEN: NASA-TLX -->
+  <div class="screen" id="screen-tlx">
+    <p class="section-label">Last step</p>
+    <h2 class="display">Workload rating</h2>
+    <p class="lead">For each, move the slider from Low to High (or Good to Poor for Performance).</p>
+    <div class="card" id="tlxCard"></div>
+    <button class="btn btn-primary" onclick="submitStudy()">Finish Study &rarr;</button>
+  </div>
+
+  <!-- SCREEN: DONE -->
+  <div class="screen" id="screen-done">
+    <div class="card" style="text-align:center;">
+      <p class="section-label">Study complete</p>
+      <h2 class="display">Thank you</h2>
+      <p class="lead">Thank you for taking part. All emails shown to you today (including the "phishing" ones) were simulated for research purposes; no real phishing content or data request was ever involved. Your anonymous responses will contribute to research on phishing detection tools for university students.</p>
+    </div>
+  </div>
+
+</div>
+
+<script>
+let demographics = {};
+let pretestEmails = [], pretestAnswers = [], pretestIdx = 0;
+let participantCode = '';
+let toolIdx = 0;
+let posttestEmails = [], posttestAnswers = [], posttestIdx = 0;
+let susResponses = new Array(10).fill(null);
+let tlxResponses = {};
+
+const SUS_ITEMS = [
+  "I think that I would like to use this system frequently.",
+  "I found the system unnecessarily complex.",
+  "I thought the system was easy to use.",
+  "I think that I would need the support of a technical person to use this system.",
+  "I found the various functions in this system were well integrated.",
+  "I thought there was too much inconsistency in this system.",
+  "I would imagine that most people would learn to use this system very quickly.",
+  "I found the system very cumbersome to use.",
+  "I felt very confident using the system.",
+  "I needed to learn a lot of things before I could get going with this system."
+];
+
+const TLX_ITEMS = [
+  { key: "mental_demand", label: "Mental Demand", desc: "How mentally demanding was the task?", lowLabel: "Low", highLabel: "High" },
+  { key: "physical_demand", label: "Physical Demand", desc: "How physically demanding was the task?", lowLabel: "Low", highLabel: "High" },
+  { key: "temporal_demand", label: "Temporal Demand", desc: "How hurried or rushed was the pace?", lowLabel: "Low", highLabel: "High" },
+  { key: "performance", label: "Performance", desc: "How successful were you in accomplishing the task?", lowLabel: "Perfect", highLabel: "Failure" },
+  { key: "effort", label: "Effort", desc: "How hard did you have to work?", lowLabel: "Low", highLabel: "High" },
+  { key: "frustration", label: "Frustration", desc: "How irritated, stressed, or annoyed were you?", lowLabel: "Low", highLabel: "High" }
+];
+
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ---- Consent ----
+document.querySelectorAll('.consent-check').forEach(cb => {
+  cb.addEventListener('change', () => {
+    const allChecked = [...document.querySelectorAll('.consent-check')].every(c => c.checked);
+    document.getElementById('btnConsentContinue').disabled = !allChecked;
+  });
+});
+document.getElementById('btnConsentContinue').addEventListener('click', () => showScreen('screen-demographics'));
+
+// ---- Demographics -> Pretest ----
+document.getElementById('btnStartPretest').addEventListener('click', async () => {
+  const pt = document.querySelector('input[name=pt]:checked');
+  const pp = document.querySelector('input[name=pp]:checked');
+  const sk = document.querySelector('input[name=sk]:checked');
+  const age = document.getElementById('age_group').value;
+  const programme = document.getElementById('programme').value;
+  const year = document.getElementById('year_of_study').value;
+
+  if (!age || !programme || !year || !pt || !pp || !sk) {
+    document.getElementById('demoError').classList.remove('hidden');
+    return;
+  }
+  document.getElementById('demoError').classList.add('hidden');
+  demographics = {
+    age_group: age, programme, year_of_study: year,
+    prior_training: pt.value, prior_phishing_experience: pp.value, self_knowledge_rating: sk.value
+  };
+
+  const res = await fetch('/study/pretest-emails');
+  const data = await res.json();
+  pretestEmails = data.emails;
+  pretestIdx = 0;
+  pretestAnswers = [];
+  renderPretestEmail();
+  showScreen('screen-pretest');
+});
+
+function renderPretestEmail() {
+  const e = pretestEmails[pretestIdx];
+  document.getElementById('pretestBadge').textContent = `Email ${pretestIdx + 1} of ${pretestEmails.length}`;
+  document.getElementById('pretestEmailText').textContent = e.text;
+  document.getElementById('pretestConfidenceCard').classList.add('hidden');
+  document.querySelectorAll('#pretestConfidence input').forEach(r => r.checked = false);
+}
+
+function answerPretest(verdict) {
+  pretestAnswers.push({ id: pretestEmails[pretestIdx].id, verdict, confidence: null });
+  document.getElementById('pretestConfidenceCard').classList.remove('hidden');
+}
+
+function nextPretestEmail() {
+  const conf = document.querySelector('input[name=pconf]:checked');
+  if (!conf) return;
+  pretestAnswers[pretestAnswers.length - 1].confidence = conf.value;
+  pretestIdx++;
+  if (pretestIdx >= pretestEmails.length) {
+    submitPretest();
+  } else {
+    renderPretestEmail();
+  }
+}
+
+async function submitPretest() {
+  const res = await fetch('/study/submit-pretest', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ demographics, pretest_emails: pretestAnswers })
+  });
+  const data = await res.json();
+  participantCode = data.code;
+  document.getElementById('codeValue').textContent = participantCode;
+  showScreen('screen-code-display');
+}
+
+// ---- Tool interaction (reuses the real /classify endpoint) ----
+function startToolInteraction() {
+  toolIdx = 0;
+  showScreen('screen-tool-interaction');
+  renderToolEmail();
+}
+
+async function renderToolEmail() {
+  const e = pretestEmails[toolIdx];
+  document.getElementById('toolBadge').textContent = `Tool result ${toolIdx + 1} of ${pretestEmails.length}`;
+  document.getElementById('toolEmailText').textContent = e.text;
+  document.getElementById('toolLoading').classList.remove('hidden');
+  document.getElementById('toolResultBox').classList.add('hidden');
+  document.getElementById('btnToolNext').classList.add('hidden');
+
+  const res = await fetch('/classify', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email_text: e.text })
+  });
+  const data = await res.json();
+  document.getElementById('toolLoading').classList.add('hidden');
+  document.getElementById('toolVerdict').textContent = `Tool verdict: ${data.verdict} (${Math.round(data.confidence * 100)}% confidence)`;
+  document.getElementById('toolSummary').textContent = data.summary;
+  document.getElementById('toolResultBox').classList.remove('hidden');
+  document.getElementById('btnToolNext').classList.remove('hidden');
+}
+
+function nextToolEmail() {
+  toolIdx++;
+  if (toolIdx >= pretestEmails.length) {
+    showScreen('screen-code-gate');
+  } else {
+    renderToolEmail();
+  }
+}
+
+// ---- Code gate -> Posttest ----
+async function verifyCode() {
+  const code = document.getElementById('codeInput').value.trim().toUpperCase();
+  const res = await fetch('/study/verify-code', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ code })
+  });
+  const data = await res.json();
+  const errBox = document.getElementById('codeError');
+  if (!data.valid) {
+    errBox.textContent = data.reason;
+    errBox.classList.remove('hidden');
+    return;
+  }
+  errBox.classList.add('hidden');
+  participantCode = code;
+
+  const res2 = await fetch('/study/posttest-emails');
+  const data2 = await res2.json();
+  posttestEmails = data2.emails;
+  posttestIdx = 0;
+  posttestAnswers = [];
+  renderPosttestEmail();
+  showScreen('screen-posttest');
+}
+
+function renderPosttestEmail() {
+  const e = posttestEmails[posttestIdx];
+  document.getElementById('posttestBadge').textContent = `Email ${posttestIdx + 1} of ${posttestEmails.length}`;
+  document.getElementById('posttestEmailText').textContent = e.text;
+  document.getElementById('posttestConfidenceCard').classList.add('hidden');
+  document.querySelectorAll('#posttestConfidence input').forEach(r => r.checked = false);
+}
+
+function answerPosttest(verdict) {
+  posttestAnswers.push({ id: posttestEmails[posttestIdx].id, verdict, confidence: null });
+  document.getElementById('posttestConfidenceCard').classList.remove('hidden');
+}
+
+function nextPosttestEmail() {
+  const conf = document.querySelector('input[name=poconf]:checked');
+  if (!conf) return;
+  posttestAnswers[posttestAnswers.length - 1].confidence = conf.value;
+  posttestIdx++;
+  if (posttestIdx >= posttestEmails.length) {
+    renderSus();
+    showScreen('screen-sus');
+  } else {
+    renderPosttestEmail();
+  }
+}
+
+// ---- SUS ----
+function renderSus() {
+  const container = document.getElementById('susCard');
+  container.innerHTML = '';
+  SUS_ITEMS.forEach((text, i) => {
+    const row = document.createElement('div');
+    row.style.marginBottom = '20px';
+    row.innerHTML = `<p style="font-weight:500;margin-bottom:8px;">${i + 1}. ${text}</p>
+      <div class="likert">
+        ${[1,2,3,4,5].map(v => `
+          <div class="likert-opt">
+            <input type="radio" name="sus${i}" value="${v}" id="sus${i}_${v}">
+            <label for="sus${i}_${v}">${v}</label>
+          </div>`).join('')}
+      </div>`;
+    container.appendChild(row);
+  });
+  container.addEventListener('change', () => {
+    let allAnswered = true;
+    for (let i = 0; i < 10; i++) {
+      const checked = document.querySelector(`input[name=sus${i}]:checked`);
+      susResponses[i] = checked ? checked.value : null;
+      if (!checked) allAnswered = false;
+    }
+    document.getElementById('btnSusContinue').disabled = !allAnswered;
+  });
+}
+
+// ---- NASA-TLX ----
+document.addEventListener('DOMContentLoaded', () => {
+  const container = document.getElementById('tlxCard');
+  TLX_ITEMS.forEach(item => {
+    const row = document.createElement('div');
+    row.className = 'slider-row';
+    row.innerHTML = `<label>${item.label}</label>
+      <p style="font-size:0.82rem;color:var(--muted);margin-bottom:8px;">${item.desc}</p>
+      <div class="slider-hint"><span>${item.lowLabel}</span><span>${item.highLabel}</span></div>
+      <input type="range" min="0" max="100" step="5" value="50" id="tlx_${item.key}">`;
+    container.appendChild(row);
+    tlxResponses[item.key] = 50;
+  });
+  container.addEventListener('input', (e) => {
+    if (e.target.type === 'range') {
+      const key = e.target.id.replace('tlx_', '');
+      tlxResponses[key] = e.target.value;
+    }
+  });
+});
+
+// ---- Final submission ----
+async function submitStudy() {
+  await fetch('/study/submit-posttest', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      code: participantCode,
+      posttest_emails: posttestAnswers,
+      sus_responses: susResponses,
+      tlx_responses: tlxResponses
+    })
+  });
+  showScreen('screen-done');
+}
+</script>
+</body>
+</html>

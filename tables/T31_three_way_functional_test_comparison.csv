@@ -1,0 +1,41 @@
+id,label,actual_type,logreg_predicted,logreg_correct,logreg_phishing_prob,rf_predicted,rf_correct,rf_phishing_prob,distilbert_predicted,distilbert_correct
+P1,Microsoft Account — Password Reset,Phishing,Phishing,True,0.9779,Phishing,True,0.665,Phishing,True
+P2,University IT — Account Deactivation Warning,Phishing,Legitimate,False,0.378,Phishing,True,0.7,Phishing,True
+P3,PayPal — Unusual Activity Alert,Phishing,Phishing,True,0.9043,Phishing,True,0.6,Phishing,True
+P4,Student Finance — Bank Details Update,Phishing,Phishing,True,0.8489,Phishing,True,0.535,Phishing,True
+P5,Netflix — Membership Payment Failure,Phishing,Phishing,True,0.6444,Legitimate,False,0.41,Phishing,True
+P6,HMRC — Tax Refund Claim,Phishing,Legitimate,False,0.444,Legitimate,False,0.455,Phishing,True
+P7,DHL — Customs Fee Outstanding,Phishing,Phishing,True,0.8916,Phishing,True,0.51,Phishing,True
+P8,Barclays — Account Locked,Phishing,Phishing,True,0.9316,Phishing,True,0.625,Phishing,True
+P9,Spotify — Premium Subscription Cancelled,Phishing,Phishing,True,0.6027,Legitimate,False,0.36,Phishing,True
+P10,NHS — Appointment Confirmation Requesting Details,Phishing,Legitimate,False,0.4848,Legitimate,False,0.445,Phishing,True
+P11,Apple ID — Account Suspended,Phishing,Phishing,True,0.8458,Phishing,True,0.52,Phishing,True
+P12,UCAS — Offer Confirmation Requiring NI Number,Phishing,Legitimate,False,0.2626,Legitimate,False,0.315,Phishing,True
+P13,Academic Integrity — Plagiarism Investigation,Phishing,Legitimate,False,0.3734,Legitimate,False,0.37,Phishing,True
+P14,Instagram — Password Changed Alert,Phishing,Phishing,True,0.8818,Legitimate,False,0.375,Phishing,True
+P15,Evri — Missed Delivery Redelivery Fee,Phishing,Phishing,True,0.8001,Legitimate,False,0.37,Phishing,True
+P16,Council Tax — Reduction Rebate Offer,Phishing,Legitimate,False,0.4523,Legitimate,False,0.485,Phishing,True
+P17,WhatsApp — Account Registered on New Device,Phishing,Phishing,True,0.7683,Phishing,True,0.595,Phishing,True
+P18,BT — Exclusive Full Fibre Upgrade Offer,Phishing,Phishing,True,0.6559,Legitimate,False,0.49,Phishing,True
+P19,Graduate Job Offer — Immediate Bank Details Requested,Phishing,Legitimate,False,0.3426,Phishing,True,0.525,Phishing,True
+P20,Amazon — Prize Winner Notification,Phishing,Legitimate,False,0.4997,Legitimate,False,0.43,Phishing,True
+L1,Google Docs — File Share Notification,Legitimate,Legitimate,True,0.0462,Legitimate,True,0.175,Legitimate,True
+L2,Amazon — Order Dispatched Confirmation,Legitimate,Legitimate,True,0.2562,Legitimate,True,0.355,Legitimate,True
+L3,LinkedIn — Connection Invitation,Legitimate,Legitimate,True,0.1673,Legitimate,True,0.25,Legitimate,True
+L4,Zoom — Tutorial Meeting Invitation,Legitimate,Legitimate,True,0.0714,Legitimate,True,0.155,Phishing,False
+L5,University Library — Book Return Reminder,Legitimate,Legitimate,True,0.0868,Legitimate,True,0.38,Phishing,False
+L6,GitHub — Pull Request Review Request,Legitimate,Legitimate,True,0.0462,Legitimate,True,0.19,Legitimate,True
+L7,Spotify — Monthly Subscription Receipt,Legitimate,Legitimate,True,0.1316,Legitimate,True,0.375,Phishing,False
+L8,NHS — Appointment Reminder,Legitimate,Legitimate,True,0.1614,Legitimate,True,0.28,Phishing,False
+L9,Canvas — Assignment Feedback Notification,Legitimate,Legitimate,True,0.0879,Legitimate,True,0.215,Legitimate,True
+L10,UCAS Track — University Application Decision,Legitimate,Legitimate,True,0.0633,Legitimate,True,0.285,Legitimate,True
+L11,Microsoft Teams — Meeting Invitation,Legitimate,Legitimate,True,0.0882,Legitimate,True,0.11,Phishing,False
+L12,Sunderland Students' Union — Weekly Update,Legitimate,Legitimate,True,0.0846,Legitimate,True,0.085,Phishing,False
+L13,Indeed — Saved Job Search Alert,Legitimate,Legitimate,True,0.1419,Legitimate,True,0.315,Legitimate,True
+L14,Apple — App Store Purchase Receipt,Legitimate,Legitimate,True,0.4333,Legitimate,True,0.37,Phishing,False
+L15,Google — Monthly Account Security Summary,Legitimate,Legitimate,True,0.2714,Legitimate,True,0.385,Phishing,False
+L16,eBay — Auction Won Notification,Legitimate,Phishing,False,0.6708,Legitimate,True,0.33,Phishing,False
+L17,Dropbox — Classmate File Request,Legitimate,Legitimate,True,0.1488,Legitimate,True,0.165,Legitimate,True
+L18,Grammarly — Weekly Writing Stats Report,Legitimate,Legitimate,True,0.0157,Legitimate,True,0.21,Legitimate,True
+L19,Sport Sunderland — Fitness Suite Booking Confirmed,Legitimate,Legitimate,True,0.2548,Legitimate,True,0.17,Phishing,False
+L20,Turnitin — Assignment Submission Receipt,Legitimate,Legitimate,True,0.0998,Legitimate,True,0.27,Phishing,False

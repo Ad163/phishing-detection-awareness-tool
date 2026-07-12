@@ -1,0 +1,5 @@
+step,rows,rows_removed
+raw combined dataset,82486,0
+after removing full-row duplicates,82078,408
+after removing text < 10 chars,82072,6
+after removing text > 50000 chars,82016,56
