@@ -5,121 +5,384 @@
       "id": "P1",
       "label": "Microsoft Account — Password Reset",
       "type": "Phishing",
-      "text": "⚠️ Urgent: Your Microsoft Account Password Has Been Reset From: Microsoft Account Security <security-noreply@micros0ft-accounts.com> To: you@university.ac.uk Date: Today, 09:14 AM Dear User, We detected that your Microsoft account password was reset from an unrecognised device in Lagos, Nigeria at 09:02 AM today. If this was not you, your account may be compromised. To secure your account immediately, verify your identity within 15 minutes or your account will be temporarily suspended. Verify My Account Now If you did not request this change, click the link above immediately. Failure to verify will result in permanent account suspension. © 2026 Microsoft Corporation. One Microsoft Way, Redmond, WA 98052 | Unsubscribe"
+      "text": "⚠️ Urgent: Your Microsoft Account Password Has Been Reset From: Microsoft Account Security <security-noreply@micros0ft-accounts.com> To: you@university.ac.uk Date: Today, 09:14 AM Dear User, We detected that your Microsoft account password was reset from an unrecognised device in Lagos, Nigeria at 09:02 AM today. If this was not you, your account may be compromised. To secure your account immediately, verify your identity within 15 minutes or your account will be temporarily suspended. Verify My Account Now If you did not request this change, click the link above immediately. Failure to verify will result in permanent account suspension. © 2026 Microsoft Corporation. One Microsoft Way, Redmond, WA 98052 | Unsubscribe",
+      "display": {
+        "subject": "⚠️ Urgent: Your Microsoft Account Password Has Been Reset",
+        "from": "Microsoft Account Security <security-noreply@micros0ft-accounts.com>",
+        "to": "you@university.ac.uk",
+        "date": "Today, 09:14 AM",
+        "body_paragraphs": [
+          "Dear User,",
+          "We detected that your Microsoft account password was reset from an unrecognised device in Lagos, Nigeria at 09:02 AM today. If this was not you, your account may be compromised.",
+          "To secure your account immediately, verify your identity within 15 minutes or your account will be temporarily suspended.",
+          "Verify My Account Now",
+          "If you did not request this change, click the link above immediately. Failure to verify will result in permanent account suspension."
+        ]
+      }
     },
     {
       "id": "P2",
       "label": "University IT — Account Deactivation Warning",
       "type": "Phishing",
-      "text": "ACTION REQUIRED: Your University Email Will Be Deactivated From: IT Helpdesk <ithelpdesk@university-system-alerts.net> To: you@university.ac.uk Date: Today, 08:47 AM Dear Student, Our systems have detected that your university email account is due for mandatory verification as part of our annual security audit. Failure to verify within 24 hours will result in your account being permanently deactivated . This will affect your access to Canvas, student portal, and all university systems. Click Here to Verify Your Account Please confirm the following when prompted: Student ID, Date of Birth, Current Password . University IT Department | Do not reply to this email University IT Systems | Automated Notification"
+      "text": "ACTION REQUIRED: Your University Email Will Be Deactivated From: IT Helpdesk <ithelpdesk@university-system-alerts.net> To: you@university.ac.uk Date: Today, 08:47 AM Dear Student, Our systems have detected that your university email account is due for mandatory verification as part of our annual security audit. Failure to verify within 24 hours will result in your account being permanently deactivated . This will affect your access to Canvas, student portal, and all university systems. Click Here to Verify Your Account Please confirm the following when prompted: Student ID, Date of Birth, Current Password . University IT Department | Do not reply to this email University IT Systems | Automated Notification",
+      "display": {
+        "subject": "ACTION REQUIRED: Your University Email Will Be Deactivated",
+        "from": "IT Helpdesk <ithelpdesk@university-system-alerts.net>",
+        "to": "you@university.ac.uk",
+        "date": "Today, 08:47 AM",
+        "body_paragraphs": [
+          "Dear Student,",
+          "Our systems have detected that your university email account is due for mandatory verification as part of our annual security audit. Failure to verify within 24 hours will result in your account being permanently deactivated .",
+          "This will affect your access to Canvas, student portal, and all university systems.",
+          "Click Here to Verify Your Account",
+          "Please confirm the following when prompted: Student ID, Date of Birth, Current Password .",
+          "University IT Department | Do not reply to this email"
+        ]
+      }
     },
     {
       "id": "P3",
       "label": "PayPal — Unusual Activity Alert",
       "type": "Phishing",
-      "text": "We noticed unusual activity on your PayPal account From: PayPal Customer Service <service@paypal-secure-verify.com> To: you@university.ac.uk Date: Today, 7:22 AM Hello, We have noticed suspicious login attempts on your PayPal account from an unrecognised browser. To protect your funds, we have temporarily limited your account. A payment of £349.00 to \"Global Retail Ltd\" is pending authorisation. If you did not initiate this, you must resolve this immediately. Resolve Account Limitation You will be asked to confirm your card details and billing address to restore full access. PayPal Security Team | Reference: PPL-2026-887423 © 2026 PayPal Inc. | Legal | Privacy"
+      "text": "We noticed unusual activity on your PayPal account From: PayPal Customer Service <service@paypal-secure-verify.com> To: you@university.ac.uk Date: Today, 7:22 AM Hello, We have noticed suspicious login attempts on your PayPal account from an unrecognised browser. To protect your funds, we have temporarily limited your account. A payment of £349.00 to \"Global Retail Ltd\" is pending authorisation. If you did not initiate this, you must resolve this immediately. Resolve Account Limitation You will be asked to confirm your card details and billing address to restore full access. PayPal Security Team | Reference: PPL-2026-887423 © 2026 PayPal Inc. | Legal | Privacy",
+      "display": {
+        "subject": "We noticed unusual activity on your PayPal account",
+        "from": "PayPal Customer Service <service@paypal-secure-verify.com>",
+        "to": "you@university.ac.uk",
+        "date": "Today, 7:22 AM",
+        "body_paragraphs": [
+          "Hello,",
+          "We have noticed suspicious login attempts on your PayPal account from an unrecognised browser. To protect your funds, we have temporarily limited your account.",
+          "A payment of £349.00 to \"Global Retail Ltd\" is pending authorisation. If you did not initiate this, you must resolve this immediately.",
+          "Resolve Account Limitation",
+          "You will be asked to confirm your card details and billing address to restore full access.",
+          "PayPal Security Team | Reference: PPL-2026-887423"
+        ]
+      }
     },
     {
       "id": "P4",
       "label": "Student Finance — Bank Details Update",
       "type": "Phishing",
-      "text": "Important: Update Your Bank Details to Receive Your Student Loan From: Student Finance England <payments@studentfinance-gov.org> To: you@university.ac.uk Date: Today, 10:05 AM Dear Student, Your next student loan instalment of £2,150.00 is scheduled for release. However, our records show that your bank details require urgent verification before payment can be processed. Failure to update your details within 48 hours will result in your payment being delayed by up to 6 weeks . Update Bank Details Now You will need your: Sort Code, Account Number, National Insurance Number, and Date of Birth. Student Finance England | Department for Education Student Finance England — Automated Notification System"
+      "text": "Important: Update Your Bank Details to Receive Your Student Loan From: Student Finance England <payments@studentfinance-gov.org> To: you@university.ac.uk Date: Today, 10:05 AM Dear Student, Your next student loan instalment of £2,150.00 is scheduled for release. However, our records show that your bank details require urgent verification before payment can be processed. Failure to update your details within 48 hours will result in your payment being delayed by up to 6 weeks . Update Bank Details Now You will need your: Sort Code, Account Number, National Insurance Number, and Date of Birth. Student Finance England | Department for Education Student Finance England — Automated Notification System",
+      "display": {
+        "subject": "Important: Update Your Bank Details to Receive Your Student Loan",
+        "from": "Student Finance England <payments@studentfinance-gov.org>",
+        "to": "you@university.ac.uk",
+        "date": "Today, 10:05 AM",
+        "body_paragraphs": [
+          "Dear Student,",
+          "Your next student loan instalment of £2,150.00 is scheduled for release. However, our records show that your bank details require urgent verification before payment can be processed.",
+          "Failure to update your details within 48 hours will result in your payment being delayed by up to 6 weeks .",
+          "Update Bank Details Now",
+          "You will need your: Sort Code, Account Number, National Insurance Number, and Date of Birth.",
+          "Student Finance England | Department for Education"
+        ]
+      }
     },
     {
       "id": "P5",
       "label": "Netflix — Membership Payment Failure",
       "type": "Phishing",
-      "text": "Your Netflix membership is on hold From: Netflix <billing-update@netflix-accounts-billing.com> To: you@university.ac.uk Date: Today, 6:58 PM NETFLIX Hi, We were unable to process your most recent payment. To avoid interruption to your membership, please update your billing information as soon as possible. Update Payment Information Your account will be cancelled in 3 days if payment is not received. Questions? Visit the Help Centre . This message was sent to your registered email address. Netflix International — © 2026 Netflix, Inc."
+      "text": "Your Netflix membership is on hold From: Netflix <billing-update@netflix-accounts-billing.com> To: you@university.ac.uk Date: Today, 6:58 PM NETFLIX Hi, We were unable to process your most recent payment. To avoid interruption to your membership, please update your billing information as soon as possible. Update Payment Information Your account will be cancelled in 3 days if payment is not received. Questions? Visit the Help Centre . This message was sent to your registered email address. Netflix International — © 2026 Netflix, Inc.",
+      "display": {
+        "subject": "Your Netflix membership is on hold",
+        "from": "Netflix <billing-update@netflix-accounts-billing.com>",
+        "to": "you@university.ac.uk",
+        "date": "Today, 6:58 PM",
+        "body_paragraphs": [
+          "NETFLIX",
+          "Hi,",
+          "We were unable to process your most recent payment. To avoid interruption to your membership, please update your billing information as soon as possible.",
+          "Update Payment Information",
+          "Your account will be cancelled in 3 days if payment is not received.",
+          "Questions? Visit the Help Centre . This message was sent to your registered email address."
+        ]
+      }
     },
     {
       "id": "P6",
       "label": "HMRC — Tax Refund Claim",
       "type": "Phishing",
-      "text": "HMRC: Tax Refund of £289.40 — Action Required From: HMRC Refunds <refunds@hmrc-taxrefund-gov.co> To: you@university.ac.uk Date: Today, 11:03 AM Dear Taxpayer, Following our annual self-assessment review, you are entitled to a tax refund of £289.40 . To receive your refund, you must verify your banking details within 5 working days . Please use the secure link below to submit your details and claim your refund: Claim My Refund Now If not claimed within 5 days, the refund will be voided and cannot be re-issued. HM Revenue and Customs | 100 Parliament Street, London SW1A 2BQ HMRC — Automated Tax Assessment Notification"
+      "text": "HMRC: Tax Refund of £289.40 — Action Required From: HMRC Refunds <refunds@hmrc-taxrefund-gov.co> To: you@university.ac.uk Date: Today, 11:03 AM Dear Taxpayer, Following our annual self-assessment review, you are entitled to a tax refund of £289.40 . To receive your refund, you must verify your banking details within 5 working days . Please use the secure link below to submit your details and claim your refund: Claim My Refund Now If not claimed within 5 days, the refund will be voided and cannot be re-issued. HM Revenue and Customs | 100 Parliament Street, London SW1A 2BQ HMRC — Automated Tax Assessment Notification",
+      "display": {
+        "subject": "HMRC: Tax Refund of £289.40 — Action Required",
+        "from": "HMRC Refunds <refunds@hmrc-taxrefund-gov.co>",
+        "to": "you@university.ac.uk",
+        "date": "Today, 11:03 AM",
+        "body_paragraphs": [
+          "Dear Taxpayer,",
+          "Following our annual self-assessment review, you are entitled to a tax refund of £289.40 . To receive your refund, you must verify your banking details within 5 working days .",
+          "Please use the secure link below to submit your details and claim your refund:",
+          "Claim My Refund Now",
+          "If not claimed within 5 days, the refund will be voided and cannot be re-issued.",
+          "HM Revenue and Customs | 100 Parliament Street, London SW1A 2BQ"
+        ]
+      }
     },
     {
       "id": "P7",
       "label": "DHL — Customs Fee Outstanding",
       "type": "Phishing",
-      "text": "DHL: Your parcel is awaiting delivery — £1.99 fee required From: DHL Parcel <notification@dhl-delivery-uk.net> To: you@university.ac.uk Date: Today, 8:30 AM Dear Customer, We attempted to deliver your parcel but a £1.99 customs clearance fee is outstanding. Your parcel cannot be delivered until this fee is paid. Please pay now — you have 48 hours before the parcel is returned to sender. Pay £1.99 to Release Parcel Reference: DHL-2026-UK-48273 | Tracking: Unavailable until fee is cleared DHL Express UK | Customer Notifications"
+      "text": "DHL: Your parcel is awaiting delivery — £1.99 fee required From: DHL Parcel <notification@dhl-delivery-uk.net> To: you@university.ac.uk Date: Today, 8:30 AM Dear Customer, We attempted to deliver your parcel but a £1.99 customs clearance fee is outstanding. Your parcel cannot be delivered until this fee is paid. Please pay now — you have 48 hours before the parcel is returned to sender. Pay £1.99 to Release Parcel Reference: DHL-2026-UK-48273 | Tracking: Unavailable until fee is cleared DHL Express UK | Customer Notifications",
+      "display": {
+        "subject": "DHL: Your parcel is awaiting delivery — £1.99 fee required",
+        "from": "DHL Parcel <notification@dhl-delivery-uk.net>",
+        "to": "you@university.ac.uk",
+        "date": "Today, 8:30 AM",
+        "body_paragraphs": [
+          "Dear Customer,",
+          "We attempted to deliver your parcel but a £1.99 customs clearance fee is outstanding. Your parcel cannot be delivered until this fee is paid.",
+          "Please pay now — you have 48 hours before the parcel is returned to sender.",
+          "Pay £1.99 to Release Parcel",
+          "Reference: DHL-2026-UK-48273 | Tracking: Unavailable until fee is cleared"
+        ]
+      }
     },
     {
       "id": "P8",
       "label": "Barclays — Account Locked",
       "type": "Phishing",
-      "text": "Important: Your Barclays Online Banking account has been locked From: Barclays Security <alert@barclays-secure-banking.com> To: you@university.ac.uk Date: Today, 2:41 PM Dear Valued Customer, To protect you, we have temporarily locked your Barclays Online Banking account after detecting unusual transaction activity from an unrecognised IP address. To unlock your account, please verify your identity using the secure link below. You will need your card number and PIN. Unlock My Account Securely This is an automated security notification. Case reference: BAR-SEC-29471. Barclays Bank UK PLC | Authorised by the PRA | Regulated by the FCA"
+      "text": "Important: Your Barclays Online Banking account has been locked From: Barclays Security <alert@barclays-secure-banking.com> To: you@university.ac.uk Date: Today, 2:41 PM Dear Valued Customer, To protect you, we have temporarily locked your Barclays Online Banking account after detecting unusual transaction activity from an unrecognised IP address. To unlock your account, please verify your identity using the secure link below. You will need your card number and PIN. Unlock My Account Securely This is an automated security notification. Case reference: BAR-SEC-29471. Barclays Bank UK PLC | Authorised by the PRA | Regulated by the FCA",
+      "display": {
+        "subject": "Important: Your Barclays Online Banking account has been locked",
+        "from": "Barclays Security <alert@barclays-secure-banking.com>",
+        "to": "you@university.ac.uk",
+        "date": "Today, 2:41 PM",
+        "body_paragraphs": [
+          "Dear Valued Customer,",
+          "To protect you, we have temporarily locked your Barclays Online Banking account after detecting unusual transaction activity from an unrecognised IP address.",
+          "To unlock your account, please verify your identity using the secure link below. You will need your card number and PIN.",
+          "Unlock My Account Securely",
+          "This is an automated security notification. Case reference: BAR-SEC-29471."
+        ]
+      }
     },
     {
       "id": "P9",
       "label": "Spotify — Premium Subscription Cancelled",
       "type": "Phishing",
-      "text": "Action required: Your Spotify Premium has been cancelled From: Spotify <billing@spotify-billing-help.com> To: you@university.ac.uk Date: Today, 5:17 PM Spotify Hi, Your Spotify Premium subscription has been cancelled because we couldn't process your most recent payment. Your account will be downgraded to the free plan on 15 April 2026 . Update your payment method to restore Premium and keep listening without ads. Update Payment Method You're receiving this because billing@spotify.com could not process your payment. Questions? Help Centre Spotify AB | Regeringsgatan 19, SE-111 53 Stockholm, Sweden"
+      "text": "Action required: Your Spotify Premium has been cancelled From: Spotify <billing@spotify-billing-help.com> To: you@university.ac.uk Date: Today, 5:17 PM Spotify Hi, Your Spotify Premium subscription has been cancelled because we couldn't process your most recent payment. Your account will be downgraded to the free plan on 15 April 2026 . Update your payment method to restore Premium and keep listening without ads. Update Payment Method You're receiving this because billing@spotify.com could not process your payment. Questions? Help Centre Spotify AB | Regeringsgatan 19, SE-111 53 Stockholm, Sweden",
+      "display": {
+        "subject": "Action required: Your Spotify Premium has been cancelled",
+        "from": "Spotify <billing@spotify-billing-help.com>",
+        "to": "you@university.ac.uk",
+        "date": "Today, 5:17 PM",
+        "body_paragraphs": [
+          "Spotify",
+          "Hi,",
+          "Your Spotify Premium subscription has been cancelled because we couldn't process your most recent payment. Your account will be downgraded to the free plan on 15 April 2026 .",
+          "Update your payment method to restore Premium and keep listening without ads.",
+          "Update Payment Method",
+          "You're receiving this because billing@spotify.com could not process your payment. Questions? Help Centre"
+        ]
+      }
     },
     {
       "id": "P10",
       "label": "NHS — Appointment Confirmation Requesting Details",
       "type": "Phishing",
-      "text": "NHS England — Appointment Confirmation Required From: NHS Appointments <appointments@nhs-appointments-uk.org> To: you@university.ac.uk Date: Today, 9:45 AM Dear Patient, Your upcoming NHS appointment on 25 April 2026 requires confirmation. To secure your appointment slot, please verify your details using the link below within 24 hours . You will be asked to confirm: Date of Birth, NHS Number, and Current Home Address . Confirm My Appointment Failure to confirm may result in your appointment being cancelled and reassigned. NHS England | National Health Service NHS England — Patient Communication Service"
+      "text": "NHS England — Appointment Confirmation Required From: NHS Appointments <appointments@nhs-appointments-uk.org> To: you@university.ac.uk Date: Today, 9:45 AM Dear Patient, Your upcoming NHS appointment on 25 April 2026 requires confirmation. To secure your appointment slot, please verify your details using the link below within 24 hours . You will be asked to confirm: Date of Birth, NHS Number, and Current Home Address . Confirm My Appointment Failure to confirm may result in your appointment being cancelled and reassigned. NHS England | National Health Service NHS England — Patient Communication Service",
+      "display": {
+        "subject": "NHS England — Appointment Confirmation Required",
+        "from": "NHS Appointments <appointments@nhs-appointments-uk.org>",
+        "to": "you@university.ac.uk",
+        "date": "Today, 9:45 AM",
+        "body_paragraphs": [
+          "Dear Patient,",
+          "Your upcoming NHS appointment on 25 April 2026 requires confirmation. To secure your appointment slot, please verify your details using the link below within 24 hours .",
+          "You will be asked to confirm: Date of Birth, NHS Number, and Current Home Address .",
+          "Confirm My Appointment",
+          "Failure to confirm may result in your appointment being cancelled and reassigned.",
+          "NHS England | National Health Service"
+        ]
+      }
     },
     {
       "id": "L1",
       "label": "Google Docs — File Share Notification",
       "type": "Legitimate",
-      "text": "Sarah Mitchell shared a document with you From: Google Docs <drive-shares-noreply@google.com> To: you@university.ac.uk Date: Today, 11:30 AM Sarah Mitchell (s.mitchell@university.ac.uk) has shared a document with you. 📄 Group Project Draft — Literature Review.docx Last edited: Today Open in Google Docs You are receiving this because Sarah Mitchell shared this file with your university email address. Change notification settings Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043 | Unsubscribe"
+      "text": "Sarah Mitchell shared a document with you From: Google Docs <drive-shares-noreply@google.com> To: you@university.ac.uk Date: Today, 11:30 AM Sarah Mitchell (s.mitchell@university.ac.uk) has shared a document with you. 📄 Group Project Draft — Literature Review.docx Last edited: Today Open in Google Docs You are receiving this because Sarah Mitchell shared this file with your university email address. Change notification settings Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043 | Unsubscribe",
+      "display": {
+        "subject": "Sarah Mitchell shared a document with you",
+        "from": "Google Docs <drive-shares-noreply@google.com>",
+        "to": "you@university.ac.uk",
+        "date": "Today, 11:30 AM",
+        "body_paragraphs": [
+          "Sarah Mitchell (s.mitchell@university.ac.uk) has shared a document with you.",
+          "📄 Group Project Draft — Literature Review.docx Last edited: Today",
+          "Open in Google Docs",
+          "You are receiving this because Sarah Mitchell shared this file with your university email address. Change notification settings"
+        ]
+      }
     },
     {
       "id": "L2",
       "label": "Amazon — Order Dispatched Confirmation",
       "type": "Legitimate",
-      "text": "Your Amazon order #205-3847291-5837462 has been dispatched From: Amazon <shipment-tracking@amazon.co.uk> To: you@university.ac.uk Date: Today, 2:15 PM 📦 Your order is on its way! Estimated delivery: Tomorrow by 9 PM Order Summary Introduction to Cybersecurity (Textbook) × 1 Order #205-3847291-5837462 £24.99 Track Your Package You can manage your orders in Your Account . Please do not reply to this email. Amazon.co.uk, 1 Principal Place, London EC2A 2FA | Privacy Notice"
+      "text": "Your Amazon order #205-3847291-5837462 has been dispatched From: Amazon <shipment-tracking@amazon.co.uk> To: you@university.ac.uk Date: Today, 2:15 PM 📦 Your order is on its way! Estimated delivery: Tomorrow by 9 PM Order Summary Introduction to Cybersecurity (Textbook) × 1 Order #205-3847291-5837462 £24.99 Track Your Package You can manage your orders in Your Account . Please do not reply to this email. Amazon.co.uk, 1 Principal Place, London EC2A 2FA | Privacy Notice",
+      "display": {
+        "subject": "Your Amazon order #205-3847291-5837462 has been dispatched",
+        "from": "Amazon <shipment-tracking@amazon.co.uk>",
+        "to": "you@university.ac.uk",
+        "date": "Today, 2:15 PM",
+        "body_paragraphs": [
+          "📦 Your order is on its way! Estimated delivery: Tomorrow by 9 PM",
+          "Order Summary",
+          "Introduction to Cybersecurity (Textbook) × 1 Order #205-3847291-5837462 £24.99",
+          "Track Your Package",
+          "You can manage your orders in Your Account . Please do not reply to this email."
+        ]
+      }
     },
     {
       "id": "L3",
       "label": "LinkedIn — Connection Invitation",
       "type": "Legitimate",
-      "text": "Dr James Okafor wants to connect with you on LinkedIn From: LinkedIn <invitations@linkedin.com> To: you@university.ac.uk Date: Today, 3:41 PM J Dr James Okafor Lecturer in Cybersecurity — University of Sunderland \"Hi, I came across your profile and would like to connect. I work in the School of Computer Science and am always happy to support students in the field.\" Accept Invitation View Profile You are receiving LinkedIn emails. Unsubscribe | Help LinkedIn Corporation, 1000 W Maude Ave, Sunnyvale CA 94085 | Privacy Policy"
+      "text": "Dr James Okafor wants to connect with you on LinkedIn From: LinkedIn <invitations@linkedin.com> To: you@university.ac.uk Date: Today, 3:41 PM J Dr James Okafor Lecturer in Cybersecurity — University of Sunderland \"Hi, I came across your profile and would like to connect. I work in the School of Computer Science and am always happy to support students in the field.\" Accept Invitation View Profile You are receiving LinkedIn emails. Unsubscribe | Help LinkedIn Corporation, 1000 W Maude Ave, Sunnyvale CA 94085 | Privacy Policy",
+      "display": {
+        "subject": "Dr James Okafor wants to connect with you on LinkedIn",
+        "from": "LinkedIn <invitations@linkedin.com>",
+        "to": "you@university.ac.uk",
+        "date": "Today, 3:41 PM",
+        "body_paragraphs": [
+          "J Dr James Okafor Lecturer in Cybersecurity — University of Sunderland",
+          "\"Hi, I came across your profile and would like to connect. I work in the School of Computer Science and am always happy to support students in the field.\"",
+          "Accept Invitation View Profile",
+          "You are receiving LinkedIn emails. Unsubscribe | Help"
+        ]
+      }
     },
     {
       "id": "L4",
       "label": "Zoom — Tutorial Meeting Invitation",
       "type": "Legitimate",
-      "text": "Zoom Meeting Invitation: CETM44 Tutorial — Week 9 From: Zoom <no-reply@zoom.us> To: you@university.ac.uk Date: Today, 9:00 AM 📅 CETM44 Tutorial — Week 9 Thursday, 17 April 2026 · 2:00 PM – 3:00 PM BST Adam Robson is inviting you to a scheduled Zoom meeting. Meeting ID: 847 3921 0045 Passcode: CETM44 Join Zoom Meeting You received this because you are registered for this course. Help Zoom Video Communications, Inc. 55 Almaden Blvd, San Jose, CA 95113 | Privacy"
+      "text": "Zoom Meeting Invitation: CETM44 Tutorial — Week 9 From: Zoom <no-reply@zoom.us> To: you@university.ac.uk Date: Today, 9:00 AM 📅 CETM44 Tutorial — Week 9 Thursday, 17 April 2026 · 2:00 PM – 3:00 PM BST Adam Robson is inviting you to a scheduled Zoom meeting. Meeting ID: 847 3921 0045 Passcode: CETM44 Join Zoom Meeting You received this because you are registered for this course. Help Zoom Video Communications, Inc. 55 Almaden Blvd, San Jose, CA 95113 | Privacy",
+      "display": {
+        "subject": "Zoom Meeting Invitation: CETM44 Tutorial — Week 9",
+        "from": "Zoom <no-reply@zoom.us>",
+        "to": "you@university.ac.uk",
+        "date": "Today, 9:00 AM",
+        "body_paragraphs": [
+          "📅 CETM44 Tutorial — Week 9 Thursday, 17 April 2026 · 2:00 PM – 3:00 PM BST",
+          "Adam Robson is inviting you to a scheduled Zoom meeting.",
+          "Meeting ID: 847 3921 0045 Passcode: CETM44",
+          "Join Zoom Meeting",
+          "You received this because you are registered for this course. Help"
+        ]
+      }
     },
     {
       "id": "L5",
       "label": "University Library — Book Return Reminder",
       "type": "Legitimate",
-      "text": "Library Reminder: Items Due for Return — 14 April 2026 From: University Library <library-noreply@sunderland.ac.uk> To: you@university.ac.uk Date: Today, 8:00 AM Dear Student, This is a reminder that the following items are due for return or renewal by 14 April 2026 : 📚 Cybersecurity Essentials — Stallings & Brown (2022) Loan ID: LIB-2026-33847 · Due: 14 April 2026 You can renew your items online via the student portal or visit the library in person. Items renewed online receive an automatic 2-week extension. Renew Online You are receiving this because you have active loans. Contact: library@sunderland.ac.uk University of Sunderland Library Services | St Peter's Campus | Unsubscribe"
+      "text": "Library Reminder: Items Due for Return — 14 April 2026 From: University Library <library-noreply@sunderland.ac.uk> To: you@university.ac.uk Date: Today, 8:00 AM Dear Student, This is a reminder that the following items are due for return or renewal by 14 April 2026 : 📚 Cybersecurity Essentials — Stallings & Brown (2022) Loan ID: LIB-2026-33847 · Due: 14 April 2026 You can renew your items online via the student portal or visit the library in person. Items renewed online receive an automatic 2-week extension. Renew Online You are receiving this because you have active loans. Contact: library@sunderland.ac.uk University of Sunderland Library Services | St Peter's Campus | Unsubscribe",
+      "display": {
+        "subject": "Library Reminder: Items Due for Return — 14 April 2026",
+        "from": "University Library <library-noreply@sunderland.ac.uk>",
+        "to": "you@university.ac.uk",
+        "date": "Today, 8:00 AM",
+        "body_paragraphs": [
+          "Dear Student,",
+          "This is a reminder that the following items are due for return or renewal by 14 April 2026 :",
+          "📚 Cybersecurity Essentials — Stallings & Brown (2022) Loan ID: LIB-2026-33847 · Due: 14 April 2026",
+          "You can renew your items online via the student portal or visit the library in person. Items renewed online receive an automatic 2-week extension.",
+          "Renew Online",
+          "You are receiving this because you have active loans. Contact: library@sunderland.ac.uk"
+        ]
+      }
     },
     {
       "id": "L6",
       "label": "GitHub — Pull Request Review Request",
       "type": "Legitimate",
-      "text": "[CETM44-Project] Review requested: Update authentication flow (#47) From: GitHub <noreply@github.com> To: you@university.ac.uk Date: Today, 2:30 PM t.pearson has requested your review on Pull Request #47 in CETM44-Group3/project . 🔀 PR #47 — Update authentication flow Opened by t.pearson · +34 lines, -12 lines · 2 files changed Review Pull Request You are receiving this because you were requested to review this pull request. Unsubscribe GitHub, Inc. · 88 Colin P Kelly Jr Street · San Francisco, CA 94107"
+      "text": "[CETM44-Project] Review requested: Update authentication flow (#47) From: GitHub <noreply@github.com> To: you@university.ac.uk Date: Today, 2:30 PM t.pearson has requested your review on Pull Request #47 in CETM44-Group3/project . 🔀 PR #47 — Update authentication flow Opened by t.pearson · +34 lines, -12 lines · 2 files changed Review Pull Request You are receiving this because you were requested to review this pull request. Unsubscribe GitHub, Inc. · 88 Colin P Kelly Jr Street · San Francisco, CA 94107",
+      "display": {
+        "subject": "[CETM44-Project] Review requested: Update authentication flow (#47)",
+        "from": "GitHub <noreply@github.com>",
+        "to": "you@university.ac.uk",
+        "date": "Today, 2:30 PM",
+        "body_paragraphs": [
+          "t.pearson has requested your review on Pull Request #47 in CETM44-Group3/project .",
+          "🔀 PR #47 — Update authentication flow Opened by t.pearson · +34 lines, -12 lines · 2 files changed",
+          "Review Pull Request",
+          "You are receiving this because you were requested to review this pull request. Unsubscribe"
+        ]
+      }
     },
     {
       "id": "L7",
       "label": "Spotify — Monthly Subscription Receipt",
       "type": "Legitimate",
-      "text": "Your Spotify receipt for April 2026 — £10.99 From: Spotify <no-reply@spotify.com> To: you@university.ac.uk Date: Today, 12:00 AM Spotify Thanks for your payment. 🎵 Spotify Premium Individual April 2026 · 1 April – 30 April 2026 £10.99 — Visa ending 4782 No action required. Your subscription continues automatically. Manage your subscription at spotify.com/account . Questions? Help Centre Spotify AB | Regeringsgatan 19, SE-111 53 Stockholm, Sweden"
+      "text": "Your Spotify receipt for April 2026 — £10.99 From: Spotify <no-reply@spotify.com> To: you@university.ac.uk Date: Today, 12:00 AM Spotify Thanks for your payment. 🎵 Spotify Premium Individual April 2026 · 1 April – 30 April 2026 £10.99 — Visa ending 4782 No action required. Your subscription continues automatically. Manage your subscription at spotify.com/account . Questions? Help Centre Spotify AB | Regeringsgatan 19, SE-111 53 Stockholm, Sweden",
+      "display": {
+        "subject": "Your Spotify receipt for April 2026 — £10.99",
+        "from": "Spotify <no-reply@spotify.com>",
+        "to": "you@university.ac.uk",
+        "date": "Today, 12:00 AM",
+        "body_paragraphs": [
+          "Spotify",
+          "Thanks for your payment.",
+          "🎵 Spotify Premium Individual April 2026 · 1 April – 30 April 2026 £10.99 — Visa ending 4782",
+          "No action required. Your subscription continues automatically.",
+          "Manage your subscription at spotify.com/account . Questions? Help Centre"
+        ]
+      }
     },
     {
       "id": "L8",
       "label": "NHS — Appointment Reminder",
       "type": "Legitimate",
-      "text": "Reminder: Your NHS appointment — 22 April 2026, 10:30 AM From: NHS <nhsappointments@nhs.net> To: you@university.ac.uk Date: Today, 8:00 AM 🏥 Appointment Reminder Date: Tuesday, 22 April 2026 · Time: 10:30 AM Practice: Pallion Health Centre, Sunderland SR4 6RG Type: GP Consultation If you cannot attend, please call the practice on 0191 565 0060 as soon as possible so your slot can be given to another patient. No action needed if you are attending. This message is from the NHS Appointment Reminder Service. NHS England — Automated Appointment Reminder | nhs.net"
+      "text": "Reminder: Your NHS appointment — 22 April 2026, 10:30 AM From: NHS <nhsappointments@nhs.net> To: you@university.ac.uk Date: Today, 8:00 AM 🏥 Appointment Reminder Date: Tuesday, 22 April 2026 · Time: 10:30 AM Practice: Pallion Health Centre, Sunderland SR4 6RG Type: GP Consultation If you cannot attend, please call the practice on 0191 565 0060 as soon as possible so your slot can be given to another patient. No action needed if you are attending. This message is from the NHS Appointment Reminder Service. NHS England — Automated Appointment Reminder | nhs.net",
+      "display": {
+        "subject": "Reminder: Your NHS appointment — 22 April 2026, 10:30 AM",
+        "from": "NHS <nhsappointments@nhs.net>",
+        "to": "you@university.ac.uk",
+        "date": "Today, 8:00 AM",
+        "body_paragraphs": [
+          "🏥 Appointment Reminder Date: Tuesday, 22 April 2026 · Time: 10:30 AM Practice: Pallion Health Centre, Sunderland SR4 6RG Type: GP Consultation",
+          "If you cannot attend, please call the practice on 0191 565 0060 as soon as possible so your slot can be given to another patient.",
+          "No action needed if you are attending. This message is from the NHS Appointment Reminder Service."
+        ]
+      }
     },
     {
       "id": "L9",
       "label": "Canvas — Assignment Feedback Notification",
       "type": "Legitimate",
-      "text": "New submission comment in CETM44: Assessment 1 From: Canvas <notifications@mail.instructure.com> To: you@university.ac.uk Date: Today, 4:22 PM Your CETM44 lecturer has left a comment on your Assessment 1 submission. 📋 CETM44 — Assessment 1: Cybersecurity Report Instructor comment added · Submitted 3 April 2026 Log in to Canvas to view your feedback: View Feedback on Canvas You are receiving this notification because you are enrolled in CETM44. Notification settings Instructure, Inc. | 6330 South 3000 East, Suite 700, Salt Lake City, UT 84121"
+      "text": "New submission comment in CETM44: Assessment 1 From: Canvas <notifications@mail.instructure.com> To: you@university.ac.uk Date: Today, 4:22 PM Your CETM44 lecturer has left a comment on your Assessment 1 submission. 📋 CETM44 — Assessment 1: Cybersecurity Report Instructor comment added · Submitted 3 April 2026 Log in to Canvas to view your feedback: View Feedback on Canvas You are receiving this notification because you are enrolled in CETM44. Notification settings Instructure, Inc. | 6330 South 3000 East, Suite 700, Salt Lake City, UT 84121",
+      "display": {
+        "subject": "New submission comment in CETM44: Assessment 1",
+        "from": "Canvas <notifications@mail.instructure.com>",
+        "to": "you@university.ac.uk",
+        "date": "Today, 4:22 PM",
+        "body_paragraphs": [
+          "Your CETM44 lecturer has left a comment on your Assessment 1 submission.",
+          "📋 CETM44 — Assessment 1: Cybersecurity Report Instructor comment added · Submitted 3 April 2026",
+          "Log in to Canvas to view your feedback:",
+          "View Feedback on Canvas",
+          "You are receiving this notification because you are enrolled in CETM44. Notification settings"
+        ]
+      }
     },
     {
       "id": "L10",
       "label": "UCAS Track — University Application Decision",
       "type": "Legitimate",
-      "text": "UCAS Track — University of Sunderland has made a decision on your application From: UCAS <donotreply@ucas.com> To: you@university.ac.uk Date: Today, 10:00 AM UCAS The University of Sunderland has made a decision on your application for BSc (Hons) Computer Science (2026 entry). Log in to UCAS Track to view the full details of their decision. View Decision in UCAS Track Log in using your existing UCAS credentials. This is an automated notification. UCAS Application: 26-000123456 UCAS | Rosehill, New Barn Lane, Cheltenham, GL52 3LZ | Privacy Notice"
+      "text": "UCAS Track — University of Sunderland has made a decision on your application From: UCAS <donotreply@ucas.com> To: you@university.ac.uk Date: Today, 10:00 AM UCAS The University of Sunderland has made a decision on your application for BSc (Hons) Computer Science (2026 entry). Log in to UCAS Track to view the full details of their decision. View Decision in UCAS Track Log in using your existing UCAS credentials. This is an automated notification. UCAS Application: 26-000123456 UCAS | Rosehill, New Barn Lane, Cheltenham, GL52 3LZ | Privacy Notice",
+      "display": {
+        "subject": "UCAS Track — University of Sunderland has made a decision on your application",
+        "from": "UCAS <donotreply@ucas.com>",
+        "to": "you@university.ac.uk",
+        "date": "Today, 10:00 AM",
+        "body_paragraphs": [
+          "UCAS",
+          "The University of Sunderland has made a decision on your application for BSc (Hons) Computer Science (2026 entry).",
+          "Log in to UCAS Track to view the full details of their decision.",
+          "View Decision in UCAS Track",
+          "Log in using your existing UCAS credentials. This is an automated notification. UCAS Application: 26-000123456"
+        ]
+      }
     }
   ],
   "posttest_batch": [
@@ -127,121 +390,382 @@
       "id": "P11",
       "label": "Apple ID — Account Suspended",
       "type": "Phishing",
-      "text": "Your Apple ID has been suspended — verify now From: Apple ID <no-reply@appleid-verify-account.com> To: you@university.ac.uk Date: Today, 3:02 PM 🍎 Apple Your Apple ID has been locked for security reasons . A sign-in attempt was made from an unrecognised device in Amsterdam, Netherlands. To restore access, verify your identity within 24 hours or your account and all associated iCloud data will be permanently deleted. Verify Identity Now Apple Support | appleid.apple.com | This is an automated security alert. Copyright © 2026 Apple Inc. One Apple Park Way, Cupertino, CA 95014"
+      "text": "Your Apple ID has been suspended — verify now From: Apple ID <no-reply@appleid-verify-account.com> To: you@university.ac.uk Date: Today, 3:02 PM 🍎 Apple Your Apple ID has been locked for security reasons . A sign-in attempt was made from an unrecognised device in Amsterdam, Netherlands. To restore access, verify your identity within 24 hours or your account and all associated iCloud data will be permanently deleted. Verify Identity Now Apple Support | appleid.apple.com | This is an automated security alert. Copyright © 2026 Apple Inc. One Apple Park Way, Cupertino, CA 95014",
+      "display": {
+        "subject": "Your Apple ID has been suspended — verify now",
+        "from": "Apple ID <no-reply@appleid-verify-account.com>",
+        "to": "you@university.ac.uk",
+        "date": "Today, 3:02 PM",
+        "body_paragraphs": [
+          "🍎 Apple",
+          "Your Apple ID has been locked for security reasons . A sign-in attempt was made from an unrecognised device in Amsterdam, Netherlands.",
+          "To restore access, verify your identity within 24 hours or your account and all associated iCloud data will be permanently deleted.",
+          "Verify Identity Now",
+          "Apple Support | appleid.apple.com | This is an automated security alert."
+        ]
+      }
     },
     {
       "id": "P12",
       "label": "UCAS — Offer Confirmation Requiring NI Number",
       "type": "Phishing",
-      "text": "UCAS — New University Offer Received — Confirm Acceptance From: UCAS Admissions <notifications@ucas-admissions-portal.net> To: you@university.ac.uk Date: Today, 12:09 PM Congratulations! The University of Sunderland has made you a conditional offer for BSc (Hons) Computer Science (2026 entry). To confirm your acceptance, please log in via the link below and provide your National Insurance Number for student finance pre-registration. Confirm Your Offer Now ⚠ You must respond within 72 hours or this offer will be withdrawn. UCAS | Rosehill, New Barn Lane, Cheltenham, GL52 3LZ UCAS Admissions — Automated Notification"
+      "text": "UCAS — New University Offer Received — Confirm Acceptance From: UCAS Admissions <notifications@ucas-admissions-portal.net> To: you@university.ac.uk Date: Today, 12:09 PM Congratulations! The University of Sunderland has made you a conditional offer for BSc (Hons) Computer Science (2026 entry). To confirm your acceptance, please log in via the link below and provide your National Insurance Number for student finance pre-registration. Confirm Your Offer Now ⚠ You must respond within 72 hours or this offer will be withdrawn. UCAS | Rosehill, New Barn Lane, Cheltenham, GL52 3LZ UCAS Admissions — Automated Notification",
+      "display": {
+        "subject": "UCAS — New University Offer Received — Confirm Acceptance",
+        "from": "UCAS Admissions <notifications@ucas-admissions-portal.net>",
+        "to": "you@university.ac.uk",
+        "date": "Today, 12:09 PM",
+        "body_paragraphs": [
+          "Congratulations!",
+          "The University of Sunderland has made you a conditional offer for BSc (Hons) Computer Science (2026 entry).",
+          "To confirm your acceptance, please log in via the link below and provide your National Insurance Number for student finance pre-registration.",
+          "Confirm Your Offer Now",
+          "⚠ You must respond within 72 hours or this offer will be withdrawn.",
+          "UCAS | Rosehill, New Barn Lane, Cheltenham, GL52 3LZ"
+        ]
+      }
     },
     {
       "id": "P13",
       "label": "Academic Integrity — Plagiarism Investigation",
       "type": "Phishing",
-      "text": "URGENT: Academic Misconduct Investigation — Your Response Required From: Academic Integrity Office <integrity@academic-conduct-portal.com> To: you@university.ac.uk Date: Today, 10:28 AM Dear Student, A formal plagiarism allegation has been raised in connection with your CETM44 Assessment 2 submission. You are required to access the misconduct portal immediately to submit your response. Failure to respond within 48 hours may result in automatic disciplinary action , including potential module failure. Access Misconduct Portal Now You will need to enter your Student ID and portal password to proceed. Academic Integrity Office | Case Reference: AI-2026-0394 Academic Conduct Portal — Automated Notification"
+      "text": "URGENT: Academic Misconduct Investigation — Your Response Required From: Academic Integrity Office <integrity@academic-conduct-portal.com> To: you@university.ac.uk Date: Today, 10:28 AM Dear Student, A formal plagiarism allegation has been raised in connection with your CETM44 Assessment 2 submission. You are required to access the misconduct portal immediately to submit your response. Failure to respond within 48 hours may result in automatic disciplinary action , including potential module failure. Access Misconduct Portal Now You will need to enter your Student ID and portal password to proceed. Academic Integrity Office | Case Reference: AI-2026-0394 Academic Conduct Portal — Automated Notification",
+      "display": {
+        "subject": "URGENT: Academic Misconduct Investigation — Your Response Required",
+        "from": "Academic Integrity Office <integrity@academic-conduct-portal.com>",
+        "to": "you@university.ac.uk",
+        "date": "Today, 10:28 AM",
+        "body_paragraphs": [
+          "Dear Student,",
+          "A formal plagiarism allegation has been raised in connection with your CETM44 Assessment 2 submission. You are required to access the misconduct portal immediately to submit your response.",
+          "Failure to respond within 48 hours may result in automatic disciplinary action , including potential module failure.",
+          "Access Misconduct Portal Now",
+          "You will need to enter your Student ID and portal password to proceed.",
+          "Academic Integrity Office | Case Reference: AI-2026-0394"
+        ]
+      }
     },
     {
       "id": "P14",
       "label": "Instagram — Password Changed Alert",
       "type": "Phishing",
-      "text": "Your Instagram password was changed — was this you? From: Instagram Security <security@instagram-account-security.net> To: you@university.ac.uk Date: Today, 4:54 PM 📷 Instagram Hi, We noticed your Instagram password was just changed. If this was you, no action is needed. If this wasn't you , your account may be compromised. Secure your account immediately — you have 30 minutes before your account is locked permanently. Secure My Account Now Instagram | Meta Platforms Inc. Instagram — Security Notification Centre"
+      "text": "Your Instagram password was changed — was this you? From: Instagram Security <security@instagram-account-security.net> To: you@university.ac.uk Date: Today, 4:54 PM 📷 Instagram Hi, We noticed your Instagram password was just changed. If this was you, no action is needed. If this wasn't you , your account may be compromised. Secure your account immediately — you have 30 minutes before your account is locked permanently. Secure My Account Now Instagram | Meta Platforms Inc. Instagram — Security Notification Centre",
+      "display": {
+        "subject": "Your Instagram password was changed — was this you?",
+        "from": "Instagram Security <security@instagram-account-security.net>",
+        "to": "you@university.ac.uk",
+        "date": "Today, 4:54 PM",
+        "body_paragraphs": [
+          "📷 Instagram",
+          "Hi,",
+          "We noticed your Instagram password was just changed. If this was you, no action is needed.",
+          "If this wasn't you , your account may be compromised. Secure your account immediately — you have 30 minutes before your account is locked permanently.",
+          "Secure My Account Now",
+          "Instagram | Meta Platforms Inc."
+        ]
+      }
     },
     {
       "id": "P15",
       "label": "Evri — Missed Delivery Redelivery Fee",
       "type": "Phishing",
-      "text": "Evri: We missed you — reschedule delivery for £1.45 From: Evri Delivery <tracking@evri-redelivery-uk.com> To: you@university.ac.uk Date: Today, 1:15 PM Dear Customer, We attempted to deliver your parcel today but were unable to complete delivery as no one was home. To reschedule your delivery, please pay a £1.45 redelivery fee using our secure payment link below. Your parcel will be returned to sender after 72 hours . Reschedule & Pay £1.45 Parcel Reference: EVR-2026-UK-90124 | This is an automated delivery notification. Evri — formerly Hermes | UK Parcel Delivery"
+      "text": "Evri: We missed you — reschedule delivery for £1.45 From: Evri Delivery <tracking@evri-redelivery-uk.com> To: you@university.ac.uk Date: Today, 1:15 PM Dear Customer, We attempted to deliver your parcel today but were unable to complete delivery as no one was home. To reschedule your delivery, please pay a £1.45 redelivery fee using our secure payment link below. Your parcel will be returned to sender after 72 hours . Reschedule & Pay £1.45 Parcel Reference: EVR-2026-UK-90124 | This is an automated delivery notification. Evri — formerly Hermes | UK Parcel Delivery",
+      "display": {
+        "subject": "Evri: We missed you — reschedule delivery for £1.45",
+        "from": "Evri Delivery <tracking@evri-redelivery-uk.com>",
+        "to": "you@university.ac.uk",
+        "date": "Today, 1:15 PM",
+        "body_paragraphs": [
+          "Dear Customer,",
+          "We attempted to deliver your parcel today but were unable to complete delivery as no one was home.",
+          "To reschedule your delivery, please pay a £1.45 redelivery fee using our secure payment link below. Your parcel will be returned to sender after 72 hours .",
+          "Reschedule & Pay £1.45",
+          "Parcel Reference: EVR-2026-UK-90124 | This is an automated delivery notification."
+        ]
+      }
     },
     {
       "id": "P16",
       "label": "Council Tax — Reduction Rebate Offer",
       "type": "Phishing",
-      "text": "You may be entitled to a Council Tax Reduction — 2026/27 From: Council Benefits Team <benefits@council-tax-support-uk.org> To: you@university.ac.uk Date: Today, 9:00 AM Dear Resident, Our records indicate you may be entitled to a Council Tax Reduction of up to £420 for the 2026/27 financial year. University students and low-income households may qualify. To process your rebate, please submit your bank account details and Council Tax reference number. Limited applications available — act now. Check Eligibility & Apply This is an official communication from your local Council Benefits Team. Council Tax Support Scheme — 2026/27 Notification"
+      "text": "You may be entitled to a Council Tax Reduction — 2026/27 From: Council Benefits Team <benefits@council-tax-support-uk.org> To: you@university.ac.uk Date: Today, 9:00 AM Dear Resident, Our records indicate you may be entitled to a Council Tax Reduction of up to £420 for the 2026/27 financial year. University students and low-income households may qualify. To process your rebate, please submit your bank account details and Council Tax reference number. Limited applications available — act now. Check Eligibility & Apply This is an official communication from your local Council Benefits Team. Council Tax Support Scheme — 2026/27 Notification",
+      "display": {
+        "subject": "You may be entitled to a Council Tax Reduction — 2026/27",
+        "from": "Council Benefits Team <benefits@council-tax-support-uk.org>",
+        "to": "you@university.ac.uk",
+        "date": "Today, 9:00 AM",
+        "body_paragraphs": [
+          "Dear Resident,",
+          "Our records indicate you may be entitled to a Council Tax Reduction of up to £420 for the 2026/27 financial year. University students and low-income households may qualify.",
+          "To process your rebate, please submit your bank account details and Council Tax reference number. Limited applications available — act now.",
+          "Check Eligibility & Apply",
+          "This is an official communication from your local Council Benefits Team."
+        ]
+      }
     },
     {
       "id": "P17",
       "label": "WhatsApp — Account Registered on New Device",
       "type": "Phishing",
-      "text": "WhatsApp: Your account has been registered on a new device From: WhatsApp Security <no-reply@whatsapp-secure-alerts.com> To: you@university.ac.uk Date: Today, 7:49 AM 📱 WhatsApp Your WhatsApp account was registered on a new device (iPhone 15 Pro, London, UK). If this wasn't you, your account has been taken over. To recover your account, enter your 6-digit SMS verification code at the link below within 10 minutes . Recover My WhatsApp WhatsApp LLC | 1601 Willow Road, Menlo Park, CA 94025 WhatsApp Inc. — Automated Security Alert"
+      "text": "WhatsApp: Your account has been registered on a new device From: WhatsApp Security <no-reply@whatsapp-secure-alerts.com> To: you@university.ac.uk Date: Today, 7:49 AM 📱 WhatsApp Your WhatsApp account was registered on a new device (iPhone 15 Pro, London, UK). If this wasn't you, your account has been taken over. To recover your account, enter your 6-digit SMS verification code at the link below within 10 minutes . Recover My WhatsApp WhatsApp LLC | 1601 Willow Road, Menlo Park, CA 94025 WhatsApp Inc. — Automated Security Alert",
+      "display": {
+        "subject": "WhatsApp: Your account has been registered on a new device",
+        "from": "WhatsApp Security <no-reply@whatsapp-secure-alerts.com>",
+        "to": "you@university.ac.uk",
+        "date": "Today, 7:49 AM",
+        "body_paragraphs": [
+          "📱 WhatsApp",
+          "Your WhatsApp account was registered on a new device (iPhone 15 Pro, London, UK). If this wasn't you, your account has been taken over.",
+          "To recover your account, enter your 6-digit SMS verification code at the link below within 10 minutes .",
+          "Recover My WhatsApp",
+          "WhatsApp LLC | 1601 Willow Road, Menlo Park, CA 94025"
+        ]
+      }
     },
     {
       "id": "P18",
       "label": "BT — Exclusive Full Fibre Upgrade Offer",
       "type": "Phishing",
-      "text": "Exclusive BT customer offer: FREE upgrade to Full Fibre From: BT Offers <exclusive@bt-upgrade-offer.net> To: you@university.ac.uk Date: Today, 10:55 AM 🌐 BT As a valued BT customer, you have been selected for a FREE upgrade to BT Full Fibre 900 — 3 months free, no contract change required. To claim your upgrade, confirm your account and billing details using the link below. This offer expires in 48 hours. Claim My Free Upgrade BT Consumer | Terms and conditions apply. BT Group plc. BT Group — Customer Offers & Promotions"
+      "text": "Exclusive BT customer offer: FREE upgrade to Full Fibre From: BT Offers <exclusive@bt-upgrade-offer.net> To: you@university.ac.uk Date: Today, 10:55 AM 🌐 BT As a valued BT customer, you have been selected for a FREE upgrade to BT Full Fibre 900 — 3 months free, no contract change required. To claim your upgrade, confirm your account and billing details using the link below. This offer expires in 48 hours. Claim My Free Upgrade BT Consumer | Terms and conditions apply. BT Group plc. BT Group — Customer Offers & Promotions",
+      "display": {
+        "subject": "Exclusive BT customer offer: FREE upgrade to Full Fibre",
+        "from": "BT Offers <exclusive@bt-upgrade-offer.net>",
+        "to": "you@university.ac.uk",
+        "date": "Today, 10:55 AM",
+        "body_paragraphs": [
+          "🌐 BT",
+          "As a valued BT customer, you have been selected for a FREE upgrade to BT Full Fibre 900 — 3 months free, no contract change required.",
+          "To claim your upgrade, confirm your account and billing details using the link below. This offer expires in 48 hours.",
+          "Claim My Free Upgrade",
+          "BT Consumer | Terms and conditions apply. BT Group plc."
+        ]
+      }
     },
     {
       "id": "P19",
       "label": "Graduate Job Offer — Immediate Bank Details Requested",
       "type": "Phishing",
-      "text": "Offer of Employment — Graduate Data Analyst — £35,000 From: HR Team <hr@recruitment-solutions-uk.com> To: you@university.ac.uk Date: Today, 9:22 AM Dear Candidate, We are pleased to offer you the position of Graduate Data Analyst at a salary of £35,000 per annum , with an immediate start date of 1 May 2026 . To set up your salary payments, please provide your bank sort code and account number at your earliest convenience using the secure link below. Submit Payment Details & Accept Offer Recruitment Solutions UK | Reference: GRAD-DA-2026-04 Recruitment Solutions UK — Graduate Talent Division"
+      "text": "Offer of Employment — Graduate Data Analyst — £35,000 From: HR Team <hr@recruitment-solutions-uk.com> To: you@university.ac.uk Date: Today, 9:22 AM Dear Candidate, We are pleased to offer you the position of Graduate Data Analyst at a salary of £35,000 per annum , with an immediate start date of 1 May 2026 . To set up your salary payments, please provide your bank sort code and account number at your earliest convenience using the secure link below. Submit Payment Details & Accept Offer Recruitment Solutions UK | Reference: GRAD-DA-2026-04 Recruitment Solutions UK — Graduate Talent Division",
+      "display": {
+        "subject": "Offer of Employment — Graduate Data Analyst — £35,000",
+        "from": "HR Team <hr@recruitment-solutions-uk.com>",
+        "to": "you@university.ac.uk",
+        "date": "Today, 9:22 AM",
+        "body_paragraphs": [
+          "Dear Candidate,",
+          "We are pleased to offer you the position of Graduate Data Analyst at a salary of £35,000 per annum , with an immediate start date of 1 May 2026 .",
+          "To set up your salary payments, please provide your bank sort code and account number at your earliest convenience using the secure link below.",
+          "Submit Payment Details & Accept Offer",
+          "Recruitment Solutions UK | Reference: GRAD-DA-2026-04"
+        ]
+      }
     },
     {
       "id": "P20",
       "label": "Amazon — Prize Winner Notification",
       "type": "Phishing",
-      "text": "🎉 Congratulations! You've been selected as an Amazon Prime Rewards winner From: Amazon Rewards <prizes@amazon-prime-winners.net> To: you@university.ac.uk Date: Today, 8:12 AM amazon Congratulations! Your email address was randomly selected as a winner in our Customer Appreciation Prize Draw. You have won a £500 Amazon Gift Card ! To claim your prize, verify your delivery address and pay a £2.99 handling and postage fee using the link below. You have 48 hours to claim. Claim My £500 Prize Amazon Customer Rewards Programme | Reference: AMZ-WIN-2026-97341 Amazon — Customer Appreciation Programme | © 2026"
+      "text": "🎉 Congratulations! You've been selected as an Amazon Prime Rewards winner From: Amazon Rewards <prizes@amazon-prime-winners.net> To: you@university.ac.uk Date: Today, 8:12 AM amazon Congratulations! Your email address was randomly selected as a winner in our Customer Appreciation Prize Draw. You have won a £500 Amazon Gift Card ! To claim your prize, verify your delivery address and pay a £2.99 handling and postage fee using the link below. You have 48 hours to claim. Claim My £500 Prize Amazon Customer Rewards Programme | Reference: AMZ-WIN-2026-97341 Amazon — Customer Appreciation Programme | © 2026",
+      "display": {
+        "subject": "🎉 Congratulations! You've been selected as an Amazon Prime Rewards winner",
+        "from": "Amazon Rewards <prizes@amazon-prime-winners.net>",
+        "to": "you@university.ac.uk",
+        "date": "Today, 8:12 AM",
+        "body_paragraphs": [
+          "amazon",
+          "Congratulations! Your email address was randomly selected as a winner in our Customer Appreciation Prize Draw. You have won a £500 Amazon Gift Card !",
+          "To claim your prize, verify your delivery address and pay a £2.99 handling and postage fee using the link below. You have 48 hours to claim.",
+          "Claim My £500 Prize",
+          "Amazon Customer Rewards Programme | Reference: AMZ-WIN-2026-97341"
+        ]
+      }
     },
     {
       "id": "L11",
       "label": "Microsoft Teams — Meeting Invitation",
       "type": "Legitimate",
-      "text": "Microsoft Teams: CETM44 Project Review — Week 8 From: Microsoft Teams <noreply@email.teams.microsoft.com> To: you@university.ac.uk Date: Today, 11:15 AM Microsoft Teams Adam Robson has invited you to a Teams meeting. 📅 CETM44 Project Review — Week 8 Tuesday, 16 April 2026 · 10:00 AM – 11:00 AM BST Join Microsoft Teams Meeting You can also join using Meeting ID: 473 829 104 38 | You received this because you are a participant. Help Microsoft Corporation | One Microsoft Way, Redmond, WA 98052 | Privacy"
+      "text": "Microsoft Teams: CETM44 Project Review — Week 8 From: Microsoft Teams <noreply@email.teams.microsoft.com> To: you@university.ac.uk Date: Today, 11:15 AM Microsoft Teams Adam Robson has invited you to a Teams meeting. 📅 CETM44 Project Review — Week 8 Tuesday, 16 April 2026 · 10:00 AM – 11:00 AM BST Join Microsoft Teams Meeting You can also join using Meeting ID: 473 829 104 38 | You received this because you are a participant. Help Microsoft Corporation | One Microsoft Way, Redmond, WA 98052 | Privacy",
+      "display": {
+        "subject": "Microsoft Teams: CETM44 Project Review — Week 8",
+        "from": "Microsoft Teams <noreply@email.teams.microsoft.com>",
+        "to": "you@university.ac.uk",
+        "date": "Today, 11:15 AM",
+        "body_paragraphs": [
+          "Microsoft Teams",
+          "Adam Robson has invited you to a Teams meeting.",
+          "📅 CETM44 Project Review — Week 8 Tuesday, 16 April 2026 · 10:00 AM – 11:00 AM BST",
+          "Join Microsoft Teams Meeting",
+          "You can also join using Meeting ID: 473 829 104 38 | You received this because you are a participant. Help"
+        ]
+      }
     },
     {
       "id": "L12",
       "label": "Sunderland Students' Union — Weekly Update",
       "type": "Legitimate",
-      "text": "Sunderland SU: What's On This Week — 14 April 2026 From: Sunderland Students' Union <news@su.sunderland.ac.uk> To: you@university.ac.uk Date: Today, 8:30 AM 🎓 Sunderland Students' Union — Weekly Update 🔐 Cybersecurity Society — Meet Tuesday, 6:00 PM · Murray Library Room 2.14 🎉 SU Quiz Night — Thursday, 7:30 PM · Student Bar 💬 Wellbeing Drop-In — Wednesday, 12:00–2:00 PM · Chaplaincy See the full events calendar on the Sunderland SU website. All students welcome! You're receiving this as a registered student. Manage email preferences Sunderland Students' Union | The Hub, Chester Road, Sunderland SR1 3SD"
+      "text": "Sunderland SU: What's On This Week — 14 April 2026 From: Sunderland Students' Union <news@su.sunderland.ac.uk> To: you@university.ac.uk Date: Today, 8:30 AM 🎓 Sunderland Students' Union — Weekly Update 🔐 Cybersecurity Society — Meet Tuesday, 6:00 PM · Murray Library Room 2.14 🎉 SU Quiz Night — Thursday, 7:30 PM · Student Bar 💬 Wellbeing Drop-In — Wednesday, 12:00–2:00 PM · Chaplaincy See the full events calendar on the Sunderland SU website. All students welcome! You're receiving this as a registered student. Manage email preferences Sunderland Students' Union | The Hub, Chester Road, Sunderland SR1 3SD",
+      "display": {
+        "subject": "Sunderland SU: What's On This Week — 14 April 2026",
+        "from": "Sunderland Students' Union <news@su.sunderland.ac.uk>",
+        "to": "you@university.ac.uk",
+        "date": "Today, 8:30 AM",
+        "body_paragraphs": [
+          "🎓 Sunderland Students' Union — Weekly Update",
+          "🔐 Cybersecurity Society — Meet Tuesday, 6:00 PM · Murray Library Room 2.14 🎉 SU Quiz Night — Thursday, 7:30 PM · Student Bar 💬 Wellbeing Drop-In — Wednesday, 12:00–2:00 PM · Chaplaincy",
+          "See the full events calendar on the Sunderland SU website. All students welcome!",
+          "You're receiving this as a registered student. Manage email preferences"
+        ]
+      }
     },
     {
       "id": "L13",
       "label": "Indeed — Saved Job Search Alert",
       "type": "Legitimate",
-      "text": "3 new Cybersecurity Graduate jobs near Sunderland match your profile From: Indeed Job Alerts <alert@indeed.com> To: you@university.ac.uk Date: Today, 7:00 AM indeed Based on your saved search \"Cybersecurity Graduate\" near Sunderland , 3 new jobs were posted: 🔐 Junior Security Analyst — Sage Group, Newcastle · £28k–£32k 💻 Graduate SOC Analyst — BT, Sunderland · £26k–£30k 🛡️ IT Security Graduate Scheme — HMRC, Newcastle · £27,500 View All 3 Jobs on Indeed You're receiving this because you have a saved search on Indeed. Unsubscribe from job alerts Indeed Ireland Operations Ltd | 124 St Stephen's Green, Dublin 2 | Privacy"
+      "text": "3 new Cybersecurity Graduate jobs near Sunderland match your profile From: Indeed Job Alerts <alert@indeed.com> To: you@university.ac.uk Date: Today, 7:00 AM indeed Based on your saved search \"Cybersecurity Graduate\" near Sunderland , 3 new jobs were posted: 🔐 Junior Security Analyst — Sage Group, Newcastle · £28k–£32k 💻 Graduate SOC Analyst — BT, Sunderland · £26k–£30k 🛡️ IT Security Graduate Scheme — HMRC, Newcastle · £27,500 View All 3 Jobs on Indeed You're receiving this because you have a saved search on Indeed. Unsubscribe from job alerts Indeed Ireland Operations Ltd | 124 St Stephen's Green, Dublin 2 | Privacy",
+      "display": {
+        "subject": "3 new Cybersecurity Graduate jobs near Sunderland match your profile",
+        "from": "Indeed Job Alerts <alert@indeed.com>",
+        "to": "you@university.ac.uk",
+        "date": "Today, 7:00 AM",
+        "body_paragraphs": [
+          "indeed",
+          "Based on your saved search \"Cybersecurity Graduate\" near Sunderland , 3 new jobs were posted:",
+          "🔐 Junior Security Analyst — Sage Group, Newcastle · £28k–£32k 💻 Graduate SOC Analyst — BT, Sunderland · £26k–£30k 🛡️ IT Security Graduate Scheme — HMRC, Newcastle · £27,500",
+          "View All 3 Jobs on Indeed",
+          "You're receiving this because you have a saved search on Indeed. Unsubscribe from job alerts"
+        ]
+      }
     },
     {
       "id": "L14",
       "label": "Apple — App Store Purchase Receipt",
       "type": "Legitimate",
-      "text": "Your receipt from the App Store — £4.99 From: Apple <no_reply@email.apple.com> To: you@university.ac.uk Date: Today, 3:47 PM 🍎 Apple Thank you for your purchase. 📱 Notability (Annual Subscription) 10 April 2026 · Apple ID: you@university.ac.uk £4.99 · Visa •••• 4782 If you didn't make this purchase, visit reportaproblem.apple.com to request a refund. No action required. Subscriptions renew automatically unless cancelled. Manage subscriptions at apple.com/account . Apple Distribution International Ltd · Hollyhill Industrial Estate, Cork, Ireland"
+      "text": "Your receipt from the App Store — £4.99 From: Apple <no_reply@email.apple.com> To: you@university.ac.uk Date: Today, 3:47 PM 🍎 Apple Thank you for your purchase. 📱 Notability (Annual Subscription) 10 April 2026 · Apple ID: you@university.ac.uk £4.99 · Visa •••• 4782 If you didn't make this purchase, visit reportaproblem.apple.com to request a refund. No action required. Subscriptions renew automatically unless cancelled. Manage subscriptions at apple.com/account . Apple Distribution International Ltd · Hollyhill Industrial Estate, Cork, Ireland",
+      "display": {
+        "subject": "Your receipt from the App Store — £4.99",
+        "from": "Apple <no_reply@email.apple.com>",
+        "to": "you@university.ac.uk",
+        "date": "Today, 3:47 PM",
+        "body_paragraphs": [
+          "🍎 Apple",
+          "Thank you for your purchase.",
+          "📱 Notability (Annual Subscription) 10 April 2026 · Apple ID: you@university.ac.uk £4.99 · Visa •••• 4782",
+          "If you didn't make this purchase, visit reportaproblem.apple.com to request a refund.",
+          "No action required. Subscriptions renew automatically unless cancelled. Manage subscriptions at apple.com/account ."
+        ]
+      }
     },
     {
       "id": "L15",
       "label": "Google — Monthly Account Security Summary",
       "type": "Legitimate",
-      "text": "Your monthly Google Account security checkup — March 2026 From: Google <no-reply@accounts.google.com> To: you@university.ac.uk Date: Today, 6:00 AM G Google Here's your security summary for March 2026 . ✅ No suspicious activity detected 🔒 2-Step Verification: On 📍 Last sign-in: 10 April 2026 · Sunderland, UK Review your security settings at any time at myaccount.google.com . No action is needed right now. You're receiving this monthly summary because security activity summaries are enabled for your account. Manage settings Google LLC | 1600 Amphitheatre Parkway, Mountain View, CA 94043"
+      "text": "Your monthly Google Account security checkup — March 2026 From: Google <no-reply@accounts.google.com> To: you@university.ac.uk Date: Today, 6:00 AM G Google Here's your security summary for March 2026 . ✅ No suspicious activity detected 🔒 2-Step Verification: On 📍 Last sign-in: 10 April 2026 · Sunderland, UK Review your security settings at any time at myaccount.google.com . No action is needed right now. You're receiving this monthly summary because security activity summaries are enabled for your account. Manage settings Google LLC | 1600 Amphitheatre Parkway, Mountain View, CA 94043",
+      "display": {
+        "subject": "Your monthly Google Account security checkup — March 2026",
+        "from": "Google <no-reply@accounts.google.com>",
+        "to": "you@university.ac.uk",
+        "date": "Today, 6:00 AM",
+        "body_paragraphs": [
+          "G Google",
+          "Here's your security summary for March 2026 .",
+          "✅ No suspicious activity detected 🔒 2-Step Verification: On 📍 Last sign-in: 10 April 2026 · Sunderland, UK",
+          "Review your security settings at any time at myaccount.google.com . No action is needed right now.",
+          "You're receiving this monthly summary because security activity summaries are enabled for your account. Manage settings"
+        ]
+      }
     },
     {
       "id": "L16",
       "label": "eBay — Auction Won Notification",
       "type": "Legitimate",
-      "text": "You won: USB-C Hub 7-in-1 for MacBook — £18.50 From: eBay <ebay@ebay.co.uk> To: you@university.ac.uk Date: Today, 9:03 PM e B a y Congratulations, you won the auction! 🖥️ USB-C Hub 7-in-1 for MacBook (Space Grey) Seller: tech_parts_uk · Item #: 235847910234 Winning bid: £18.50 Pay now through your eBay account to complete the purchase. Pay Now on eBay Pay within 4 days to avoid a non-payment case. Do not pay outside of eBay. Help eBay | 5 New Street Square, London EC4A 3TW | Privacy Notice"
+      "text": "You won: USB-C Hub 7-in-1 for MacBook — £18.50 From: eBay <ebay@ebay.co.uk> To: you@university.ac.uk Date: Today, 9:03 PM e B a y Congratulations, you won the auction! 🖥️ USB-C Hub 7-in-1 for MacBook (Space Grey) Seller: tech_parts_uk · Item #: 235847910234 Winning bid: £18.50 Pay now through your eBay account to complete the purchase. Pay Now on eBay Pay within 4 days to avoid a non-payment case. Do not pay outside of eBay. Help eBay | 5 New Street Square, London EC4A 3TW | Privacy Notice",
+      "display": {
+        "subject": "You won: USB-C Hub 7-in-1 for MacBook — £18.50",
+        "from": "eBay <ebay@ebay.co.uk>",
+        "to": "you@university.ac.uk",
+        "date": "Today, 9:03 PM",
+        "body_paragraphs": [
+          "e B a y",
+          "Congratulations, you won the auction!",
+          "🖥️ USB-C Hub 7-in-1 for MacBook (Space Grey) Seller: tech_parts_uk · Item #: 235847910234 Winning bid: £18.50",
+          "Pay now through your eBay account to complete the purchase.",
+          "Pay Now on eBay",
+          "Pay within 4 days to avoid a non-payment case. Do not pay outside of eBay. Help"
+        ]
+      }
     },
     {
       "id": "L17",
       "label": "Dropbox — Classmate File Request",
       "type": "Legitimate",
-      "text": "Tom Pearson has sent you a file request via Dropbox From: Dropbox <no-reply@dropbox.com> To: you@university.ac.uk Date: Today, 1:45 PM 📦 Dropbox Tom Pearson (t.pearson@university.ac.uk) is requesting files from you for: 📁 CETM44 Group Project — Research Notes Request by: Tom Pearson · Deadline: 18 April 2026 No Dropbox account is needed to upload files. Upload Files You received this because Tom Pearson sent you a file request. Learn more about file requests Dropbox, Inc. | 1800 Owens St, San Francisco, CA 94158"
+      "text": "Tom Pearson has sent you a file request via Dropbox From: Dropbox <no-reply@dropbox.com> To: you@university.ac.uk Date: Today, 1:45 PM 📦 Dropbox Tom Pearson (t.pearson@university.ac.uk) is requesting files from you for: 📁 CETM44 Group Project — Research Notes Request by: Tom Pearson · Deadline: 18 April 2026 No Dropbox account is needed to upload files. Upload Files You received this because Tom Pearson sent you a file request. Learn more about file requests Dropbox, Inc. | 1800 Owens St, San Francisco, CA 94158",
+      "display": {
+        "subject": "Tom Pearson has sent you a file request via Dropbox",
+        "from": "Dropbox <no-reply@dropbox.com>",
+        "to": "you@university.ac.uk",
+        "date": "Today, 1:45 PM",
+        "body_paragraphs": [
+          "📦 Dropbox",
+          "Tom Pearson (t.pearson@university.ac.uk) is requesting files from you for:",
+          "📁 CETM44 Group Project — Research Notes Request by: Tom Pearson · Deadline: 18 April 2026",
+          "No Dropbox account is needed to upload files.",
+          "Upload Files",
+          "You received this because Tom Pearson sent you a file request. Learn more about file requests"
+        ]
+      }
     },
     {
       "id": "L18",
       "label": "Grammarly — Weekly Writing Stats Report",
       "type": "Legitimate",
-      "text": "Your Grammarly Weekly Writing Update — Week of 7 April From: Grammarly <report@grammarly.com> To: you@university.ac.uk Date: Today, 6:00 AM ✍️ Grammarly Here's your writing summary for 7–13 April 2026 : 📝 3,214 words written and checked ✅ 47 issues corrected 🏆 Top issue: Comma usage 📊 You were more accurate than 89% of Grammarly users this week No action required — this is your automated weekly writing summary. Unsubscribe from weekly updates Grammarly, Inc. | 548 Market Street, #35410, San Francisco, CA 94104"
+      "text": "Your Grammarly Weekly Writing Update — Week of 7 April From: Grammarly <report@grammarly.com> To: you@university.ac.uk Date: Today, 6:00 AM ✍️ Grammarly Here's your writing summary for 7–13 April 2026 : 📝 3,214 words written and checked ✅ 47 issues corrected 🏆 Top issue: Comma usage 📊 You were more accurate than 89% of Grammarly users this week No action required — this is your automated weekly writing summary. Unsubscribe from weekly updates Grammarly, Inc. | 548 Market Street, #35410, San Francisco, CA 94104",
+      "display": {
+        "subject": "Your Grammarly Weekly Writing Update — Week of 7 April",
+        "from": "Grammarly <report@grammarly.com>",
+        "to": "you@university.ac.uk",
+        "date": "Today, 6:00 AM",
+        "body_paragraphs": [
+          "✍️ Grammarly",
+          "Here's your writing summary for 7–13 April 2026 :",
+          "📝 3,214 words written and checked ✅ 47 issues corrected 🏆 Top issue: Comma usage 📊 You were more accurate than 89% of Grammarly users this week",
+          "No action required — this is your automated weekly writing summary. Unsubscribe from weekly updates"
+        ]
+      }
     },
     {
       "id": "L19",
       "label": "Sport Sunderland — Fitness Suite Booking Confirmed",
       "type": "Legitimate",
-      "text": "Booking Confirmed: Sport Sunderland — Fitness Suite — 15 April 2026 From: Sport Sunderland <sport@sunderland.ac.uk> To: you@university.ac.uk Date: Today, 11:30 AM ✅ Booking Confirmed 🏋️ Fitness Suite — St Peter's Campus 📅 Tuesday, 15 April 2026 · 7:00 AM – 8:00 AM 🎫 Booking Reference: SS-2026-78234 Please bring your student card for entry. Arrive 5 minutes early. To cancel or amend, visit the Sport Sunderland portal or call 0191 515 3000. Cancellations must be made 24 hours in advance. Sport Sunderland | University of Sunderland | sport.sunderland.ac.uk"
+      "text": "Booking Confirmed: Sport Sunderland — Fitness Suite — 15 April 2026 From: Sport Sunderland <sport@sunderland.ac.uk> To: you@university.ac.uk Date: Today, 11:30 AM ✅ Booking Confirmed 🏋️ Fitness Suite — St Peter's Campus 📅 Tuesday, 15 April 2026 · 7:00 AM – 8:00 AM 🎫 Booking Reference: SS-2026-78234 Please bring your student card for entry. Arrive 5 minutes early. To cancel or amend, visit the Sport Sunderland portal or call 0191 515 3000. Cancellations must be made 24 hours in advance. Sport Sunderland | University of Sunderland | sport.sunderland.ac.uk",
+      "display": {
+        "subject": "Booking Confirmed: Sport Sunderland — Fitness Suite — 15 April 2026",
+        "from": "Sport Sunderland <sport@sunderland.ac.uk>",
+        "to": "you@university.ac.uk",
+        "date": "Today, 11:30 AM",
+        "body_paragraphs": [
+          "✅ Booking Confirmed",
+          "🏋️ Fitness Suite — St Peter's Campus 📅 Tuesday, 15 April 2026 · 7:00 AM – 8:00 AM 🎫 Booking Reference: SS-2026-78234",
+          "Please bring your student card for entry. Arrive 5 minutes early.",
+          "To cancel or amend, visit the Sport Sunderland portal or call 0191 515 3000. Cancellations must be made 24 hours in advance."
+        ]
+      }
     },
     {
       "id": "L20",
       "label": "Turnitin — Assignment Submission Receipt",
       "type": "Legitimate",
-      "text": "Turnitin — Submission Received: CETM44 Assessment 2 From: Turnitin <noreply@submit.turnitin.com> To: you@university.ac.uk Date: Today, 5:45 PM ✅ Your submission has been received successfully. 📄 CETM44 — Assessment 2: Empirical Research Study Paper ID: 2847391652 Submitted: 10 April 2026 · 17:45 GMT Instructor: Dr A. Robson Please save this email as proof of your submission. Your similarity report will be available within 24 hours. This is an automated confirmation. Do not reply to this email. For issues, contact your module tutor. Turnitin LLC | 2101 Webster Street, Suite 1800, Oakland, CA 94612"
+      "text": "Turnitin — Submission Received: CETM44 Assessment 2 From: Turnitin <noreply@submit.turnitin.com> To: you@university.ac.uk Date: Today, 5:45 PM ✅ Your submission has been received successfully. 📄 CETM44 — Assessment 2: Empirical Research Study Paper ID: 2847391652 Submitted: 10 April 2026 · 17:45 GMT Instructor: Dr A. Robson Please save this email as proof of your submission. Your similarity report will be available within 24 hours. This is an automated confirmation. Do not reply to this email. For issues, contact your module tutor. Turnitin LLC | 2101 Webster Street, Suite 1800, Oakland, CA 94612",
+      "display": {
+        "subject": "Turnitin — Submission Received: CETM44 Assessment 2",
+        "from": "Turnitin <noreply@submit.turnitin.com>",
+        "to": "you@university.ac.uk",
+        "date": "Today, 5:45 PM",
+        "body_paragraphs": [
+          "✅ Your submission has been received successfully.",
+          "📄 CETM44 — Assessment 2: Empirical Research Study Paper ID: 2847391652 Submitted: 10 April 2026 · 17:45 GMT Instructor: Dr A. Robson",
+          "Please save this email as proof of your submission. Your similarity report will be available within 24 hours.",
+          "This is an automated confirmation. Do not reply to this email. For issues, contact your module tutor."
+        ]
+      }
     }
   ]
 }

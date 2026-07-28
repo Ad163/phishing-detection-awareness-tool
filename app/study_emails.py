@@ -52,5 +52,12 @@ def get_posttest_emails() -> list:
 
 
 def public_view(emails: list) -> list:
-    """Strips ground truth before sending to the client."""
-    return [{"id": e["id"], "text": e["text"]} for e in emails]
+    """
+    Strips ground truth before sending to the client.
+
+    Includes both "text" (unchanged flattened string -- sent to /classify for
+    the tool-interaction step, must stay identical to what T30/T31 were
+    computed against) and "display" (structured subject/from/to/date/body
+    fields, used only to render a realistic email-client UI).
+    """
+    return [{"id": e["id"], "text": e["text"], "display": e.get("display")} for e in emails]

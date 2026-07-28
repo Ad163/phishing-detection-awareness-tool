@@ -31,9 +31,37 @@ def main():
     emails = {}
     for email_id, _, label, etype, html in matches:
         soup = BeautifulSoup(html, "html.parser")
+
+        # "text" is UNCHANGED from the original extraction -- this is the exact
+        # field used for classification in the functional testing (T30/T31),
+        # so it must not be altered by the display-formatting work below.
         clean_text = soup.get_text(separator=" ", strip=True)
         clean_text = re.sub(r"\s{2,}", " ", clean_text)
-        emails[email_id] = {"id": email_id, "label": label, "type": etype, "text": clean_text}
+
+        # "display" is a NEW, separate field: structured fields extracted
+        # directly from their HTML elements (not regex-parsed from flattened
+        # text), used only for rendering a realistic email-client UI. Body
+        # paragraphs are preserved as separate paragraphs rather than being
+        # flattened into one dense block.
+        subject_el = soup.select_one(".email-subject")
+        meta_divs = soup.select(".email-meta > div")
+        body_paragraphs = [p.get_text(" ", strip=True) for p in soup.select(".email-body p")]
+        body_paragraphs = [p for p in body_paragraphs if p]
+
+        def meta_value(div):
+            # each div is "<span>Label:</span> value" -- strip the label
+            text = div.get_text(" ", strip=True)
+            return re.sub(r"^(From|To|Date):\s*", "", text).strip()
+
+        display = {
+            "subject": subject_el.get_text(" ", strip=True) if subject_el else "",
+            "from": meta_value(meta_divs[0]) if len(meta_divs) > 0 else "",
+            "to": meta_value(meta_divs[1]) if len(meta_divs) > 1 else "",
+            "date": meta_value(meta_divs[2]) if len(meta_divs) > 2 else "",
+            "body_paragraphs": body_paragraphs,
+        }
+
+        emails[email_id] = {"id": email_id, "label": label, "type": etype, "text": clean_text, "display": display}
 
     def batch(ids):
         return [emails[i] for i in ids if i in emails]

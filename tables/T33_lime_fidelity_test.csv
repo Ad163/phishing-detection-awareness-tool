@@ -1,0 +1,11 @@
+id,type,baseline_phishing_prob,top5_lime_words,informative_removal_shift,random_removal_mean_shift,fidelity_ratio (informative/random)
+P1,Phishing,1.0,Urgent; Lagos; compromised; from; immediately,0.0,0.0,3.65
+P2,Phishing,0.9998,Verify; you; following; Helpdesk; not,0.0001,0.0001,1.82
+P3,Phishing,1.0,Global; be; pending; browser; 887423,0.0,0.0,0.17
+P4,Phishing,1.0,next; You; hours; Receive; that,0.0,0.0,1.81
+P5,Phishing,0.9987,address; 2026; in; will; your,0.0175,0.0005,32.49
+L1,Legitimate,0.0001,google; file; Mitchell; Today; drive,0.0,0.0002,0.24
+L2,Legitimate,0.0057,Amazon; Textbook; university; Cybersecurity; ac,0.0139,0.004,3.45
+L3,Legitimate,0.0056,James; to; LinkedIn; linkedin; with,0.2882,0.0016,179.37
+L4,Legitimate,0.749,2026; PM; Video; Tutorial; Zoom,0.7442,0.5102,1.46
+L5,Legitimate,0.9954,2026; 2022; have; You; ac,0.9877,0.0014,682.1

@@ -1,0 +1,11 @@
+id,type,repeats,mean_top5_jaccard,distinct_top1_words_across_runs
+P1,Phishing,10,0.0228,10
+P2,Phishing,10,0.0302,10
+P3,Phishing,10,0.0327,8
+P4,Phishing,10,0.037,9
+P5,Phishing,10,0.0377,8
+L1,Legitimate,10,0.05,9
+L2,Legitimate,10,0.1481,3
+L3,Legitimate,10,0.1311,2
+L4,Legitimate,10,0.1909,1
+L5,Legitimate,10,0.1228,4

@@ -15,6 +15,18 @@
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--ink); min-height: 100vh; padding: 0 0 80px; }
+
+  .site-header {
+    background: var(--ink); color: #fff; padding: 16px 24px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .site-header .logo {
+    width: 34px; height: 34px; background: var(--accent); border-radius: 8px;
+    display: flex; align-items: center; justify-content: center; font-size: 17px; flex-shrink: 0;
+  }
+  .site-header h1 { font-family: 'DM Serif Display', serif; font-size: 1.05rem; font-weight: 400; }
+  .site-header p { font-size: 0.72rem; opacity: .65; margin-top: 1px; }
+
   .container { max-width: 720px; margin: 0 auto; padding: 40px 20px 0; }
   .screen { display: none; animation: fadeUp .3s ease; }
   .screen.active { display: block; }
@@ -33,16 +45,48 @@
   }
   .radio-pill input:checked + label, .likert-opt input:checked + label { background: var(--accent); border-color: var(--accent); color: #fff; }
   .likert { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 6px; }
-  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 26px; border-radius: 8px; font-size: 0.9rem; font-weight: 500; cursor: pointer; border: none; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 13px 26px; border-radius: 8px; font-size: 0.9rem; font-weight: 500; cursor: pointer; border: none; width: 100%; }
   .btn-primary { background: var(--accent); color: #fff; }
   .btn-primary:disabled { opacity: .5; cursor: not-allowed; }
+  .btn-copy {
+    display: inline-flex; align-items: center; gap: 6px; background: var(--accent-light); color: var(--accent);
+    border: 1.5px solid var(--accent); border-radius: 8px; padding: 9px 18px; font-size: 0.85rem; font-weight: 500;
+    cursor: pointer; margin-top: 6px;
+  }
+  .btn-copy:hover { background: var(--accent); color: #fff; }
+  .resume-link { text-align: center; font-size: 0.85rem; color: var(--muted); margin-top: 16px; cursor: pointer; text-decoration: underline; }
+  .resume-link:hover { color: var(--accent); }
   .consent-box { background: #fffbeb; border: 1.5px solid #fcd34d; border-radius: 10px; padding: 18px 20px; font-size: 0.85rem; line-height: 1.7; margin-bottom: 16px; }
   .consent-item { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 12px; }
   .consent-item input { margin-top: 3px; }
   .code-display { text-align: center; padding: 30px 20px; }
-  .code-value { font-family: 'DM Serif Display', serif; font-size: 2.6rem; letter-spacing: 0.15em; color: var(--accent); margin: 16px 0; }
-  .email-chrome { border: 1.5px solid var(--border); border-radius: 10px; overflow: hidden; margin-bottom: 20px; }
-  .email-body-text { padding: 20px; font-size: 0.88rem; line-height: 1.7; color: #374151; white-space: pre-wrap; max-height: 320px; overflow-y: auto; }
+  .code-value { font-family: 'DM Serif Display', serif; font-size: 2.6rem; letter-spacing: 0.15em; color: var(--accent); margin: 16px 0; word-break: break-all; }
+
+  .gmail-card { border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin-bottom: 20px; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+  .gmail-top-bar { display: flex; justify-content: flex-end; gap: 14px; padding: 10px 18px 0; color: var(--muted); font-size: 0.9rem; }
+  .gmail-subject { font-size: 1.2rem; font-weight: 400; padding: 10px 20px 6px; color: var(--ink); word-break: break-word; }
+  .gmail-sender-row { display: flex; align-items: flex-start; gap: 12px; padding: 6px 20px 16px; border-bottom: 1px solid #f0f0f0; }
+  .gmail-avatar {
+    width: 38px; height: 38px; border-radius: 50%; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; font-weight: 600; font-size: 0.95rem;
+  }
+  .gmail-sender-info { flex: 1; min-width: 0; }
+  .gmail-sender-name { font-weight: 600; font-size: 0.88rem; color: var(--ink); }
+  .gmail-sender-email { font-weight: 400; color: var(--muted); font-size: 0.82rem; word-break: break-all; }
+  .gmail-to { font-size: 0.76rem; color: var(--muted); margin-top: 3px; }
+  .gmail-date-actions { text-align: right; flex-shrink: 0; }
+  .gmail-date { font-size: 0.76rem; color: var(--muted); white-space: nowrap; }
+  .gmail-icons { margin-top: 6px; font-size: 0.9rem; color: var(--muted); letter-spacing: 5px; white-space: nowrap; }
+  .gmail-body { padding: 18px 20px; font-size: 0.9rem; line-height: 1.7; color: #202124; max-height: 340px; overflow-y: auto; word-break: break-word; }
+  .gmail-body p { margin-bottom: 14px; }
+  .gmail-body p:last-child { margin-bottom: 0; }
+
+  @media (max-width: 600px) {
+    .gmail-sender-row { flex-wrap: wrap; }
+    .gmail-date-actions { text-align: left; margin-top: 6px; margin-left: 50px; }
+  }
+
   .verdict-btns { display: flex; gap: 14px; margin-top: 18px; }
   .verdict-btn { flex: 1; padding: 15px; border-radius: 10px; font-size: 0.95rem; font-weight: 600; cursor: pointer; border: 2px solid transparent; }
   .verdict-btn.phishing { background: var(--danger-light); border-color: var(--danger); color: var(--danger); }
@@ -56,9 +100,29 @@
   .explain-box { background: var(--accent-light); border-radius: 10px; padding: 18px 20px; margin-top: 14px; font-size: 0.88rem; line-height: 1.6; }
   .hidden { display: none; }
   .error-text { color: var(--danger); font-size: 0.85rem; margin-top: 8px; }
+
+  @media (max-width: 600px) {
+    .container { padding: 24px 14px 0; }
+    .display { font-size: 1.5rem; }
+    .card { padding: 20px; }
+    .verdict-btns { flex-direction: column; }
+    .code-value { font-size: 1.9rem; letter-spacing: 0.06em; }
+    .likert-opt label { padding: 7px 12px; font-size: 0.82rem; }
+    .site-header h1 { font-size: 0.92rem; }
+    .email-body-text { max-height: 260px; }
+  }
 </style>
 </head>
 <body>
+
+<div class="site-header">
+  <div class="logo">🔒</div>
+  <div>
+    <h1>Phishing Detection &amp; Awareness Study</h1>
+    <p>University Research — Cybersecurity Awareness</p>
+  </div>
+</div>
+
 <div class="container">
 
   <!-- SCREEN: CONSENT -->
@@ -78,6 +142,7 @@
       <div class="consent-item"><input type="checkbox" class="consent-check"><label>I agree to take part in this study.</label></div>
     </div>
     <button class="btn btn-primary" id="btnConsentContinue" disabled>Continue to Part 1 &rarr;</button>
+    <p class="resume-link" onclick="showScreen('screen-code-gate')">Already completed Part 1? Continue to Part 2 &rarr;</p>
   </div>
 
   <!-- SCREEN: DEMOGRAPHICS -->
@@ -126,12 +191,10 @@
     <span class="step-badge" id="pretestBadge">Email 1 of 5</span>
     <h2 class="display" style="font-size:1.3rem;margin-top:10px;">Is this email Phishing or Legitimate?</h2>
     <p class="lead">This is your baseline assessment — no feedback will be shown until the study is complete.</p>
-    <div class="card" style="padding:0;">
-      <div class="email-chrome"><div class="email-body-text" id="pretestEmailText"></div></div>
-    </div>
+    <div id="pretestEmailContainer"></div>
     <div class="verdict-btns">
-      <button class="verdict-btn phishing" onclick="answerPretest('Phishing')">Phishing</button>
-      <button class="verdict-btn legitimate" onclick="answerPretest('Legitimate')">Legitimate</button>
+      <button class="verdict-btn phishing" onclick="answerPretest('Phishing')">🎣 Phishing</button>
+      <button class="verdict-btn legitimate" onclick="answerPretest('Legitimate')">✅ Legitimate</button>
     </div>
     <div class="card hidden" id="pretestConfidenceCard" style="margin-top:18px;">
       <p style="font-weight:500;margin-bottom:10px;">How confident are you?</p>
@@ -149,10 +212,11 @@
   <!-- SCREEN: CODE DISPLAY -->
   <div class="screen" id="screen-code-display">
     <div class="card code-display">
-      <p class="section-label">Part 1 complete</p>
+      <p class="section-label">🎉 Part 1 complete</p>
       <h2 class="display">Your participant code</h2>
       <div class="code-value" id="codeValue">--------</div>
-      <p class="lead">Please write this code down now. You will need it to complete Part 2. It does not identify you personally.</p>
+      <button class="btn-copy" id="copyCodeBtn" onclick="copyCode()">📋 Copy Code</button>
+      <p class="lead" style="margin-top:18px;">Please write this code down now. You will need it to complete Part 2. It does not identify you personally.</p>
       <button class="btn btn-primary" onclick="showScreen('screen-tool-intro')">Continue &rarr;</button>
     </div>
   </div>
@@ -168,11 +232,11 @@
   <!-- SCREEN: TOOL INTERACTION -->
   <div class="screen" id="screen-tool-interaction">
     <span class="step-badge" id="toolBadge">Tool result 1 of 5</span>
+    <div id="toolEmailContainer"></div>
     <div class="card">
-      <div class="email-chrome"><div class="email-body-text" id="toolEmailText"></div></div>
-      <div id="toolLoading" style="padding:16px;color:var(--muted);">Analyzing with the tool...</div>
+      <div id="toolLoading" style="color:var(--muted);">🔎 Analyzing with the tool...</div>
       <div id="toolResultBox" class="hidden">
-        <p style="font-weight:700;font-size:1.1rem;margin-top:14px;" id="toolVerdict"></p>
+        <p style="font-weight:700;font-size:1.1rem;" id="toolVerdict"></p>
         <div class="explain-box" id="toolSummary"></div>
       </div>
     </div>
@@ -183,7 +247,7 @@
   <div class="screen" id="screen-code-gate">
     <p class="section-label">Part 2 of 2</p>
     <h2 class="display">Enter your participant code</h2>
-    <p class="lead">Enter the code you were given at the end of Part 1 to continue.</p>
+    <p class="lead">Enter the code you were given at the end of Part 1 to continue. If you took a break, welcome back — this is exactly what the code is for.</p>
     <div class="card">
       <input type="text" id="codeInput" placeholder="e.g. AB3D9F2K" style="text-transform:uppercase;">
       <button class="btn btn-primary" onclick="verifyCode()">Continue &rarr;</button>
@@ -196,12 +260,10 @@
     <span class="step-badge" id="posttestBadge">Email 1 of 5</span>
     <h2 class="display" style="font-size:1.3rem;margin-top:10px;">Is this email Phishing or Legitimate?</h2>
     <p class="lead">These are new emails you have not seen before.</p>
-    <div class="card" style="padding:0;">
-      <div class="email-chrome"><div class="email-body-text" id="posttestEmailText"></div></div>
-    </div>
+    <div id="posttestEmailContainer"></div>
     <div class="verdict-btns">
-      <button class="verdict-btn phishing" onclick="answerPosttest('Phishing')">Phishing</button>
-      <button class="verdict-btn legitimate" onclick="answerPosttest('Legitimate')">Legitimate</button>
+      <button class="verdict-btn phishing" onclick="answerPosttest('Phishing')">🎣 Phishing</button>
+      <button class="verdict-btn legitimate" onclick="answerPosttest('Legitimate')">✅ Legitimate</button>
     </div>
     <div class="card hidden" id="posttestConfidenceCard" style="margin-top:18px;">
       <p style="font-weight:500;margin-bottom:10px;">How confident are you?</p>
@@ -237,7 +299,7 @@
   <!-- SCREEN: DONE -->
   <div class="screen" id="screen-done">
     <div class="card" style="text-align:center;">
-      <p class="section-label">Study complete</p>
+      <p class="section-label">🎉 Study complete</p>
       <h2 class="display">Thank you</h2>
       <p class="lead">Thank you for taking part. All emails shown to you today (including the "phishing" ones) were simulated for research purposes; no real phishing content or data request was ever involved. Your anonymous responses will contribute to research on phishing detection tools for university students.</p>
     </div>
@@ -282,6 +344,69 @@ function showScreen(id) {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+function escapeHtml(str) {
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+// Each stimulus carries a structured "display" object (subject/from/to/date/
+// body_paragraphs) extracted server-side directly from the original HTML
+// elements -- rendered here as a realistic inbox layout. Falls back to plain
+// text if display data is missing for any reason.
+function splitNameEmail(fromStr) {
+  const match = (fromStr || '').match(/^(.*?)\s*<(.+?)>\s*$/);
+  if (match) return { name: match[1].trim(), email: match[2].trim() };
+  return { name: fromStr || '', email: '' };
+}
+
+function avatarColor(seed) {
+  let hash = 0;
+  for (let i = 0; i < seed.length; i++) hash = seed.charCodeAt(i) + ((hash << 5) - hash);
+  const hue = Math.abs(hash) % 360;
+  return `hsl(${hue}, 55%, 48%)`;
+}
+
+function renderEmailChrome(containerId, email) {
+  const container = document.getElementById(containerId);
+  const d = email.display;
+  if (!d || !d.subject) {
+    container.innerHTML = `<div class="gmail-card"><div class="gmail-body">${escapeHtml(email.text)}</div></div>`;
+    return;
+  }
+  const { name, email: senderEmail } = splitNameEmail(d.from);
+  const initial = (name || '?').trim().charAt(0).toUpperCase() || '?';
+  const color = avatarColor(name || d.from || 'x');
+  const paragraphs = (d.body_paragraphs || []).map(p => `<p>${escapeHtml(p)}</p>`).join('');
+
+  container.innerHTML = `
+    <div class="gmail-card">
+      <div class="gmail-top-bar">🖨️&nbsp;&nbsp;⤢</div>
+      <div class="gmail-subject">${escapeHtml(d.subject)}</div>
+      <div class="gmail-sender-row">
+        <div class="gmail-avatar" style="background:${color}">${initial}</div>
+        <div class="gmail-sender-info">
+          <div><span class="gmail-sender-name">${escapeHtml(name)}</span> <span class="gmail-sender-email">&lt;${escapeHtml(senderEmail)}&gt;</span></div>
+          <div class="gmail-to">to me ▾</div>
+        </div>
+        <div class="gmail-date-actions">
+          <div class="gmail-date">${escapeHtml(d.date)}</div>
+          <div class="gmail-icons">☆ 🙂 ↩ ⋮</div>
+        </div>
+      </div>
+      <div class="gmail-body">${paragraphs}</div>
+    </div>`;
+}
+
+function copyCode() {
+  navigator.clipboard.writeText(participantCode).then(() => {
+    const btn = document.getElementById('copyCodeBtn');
+    const original = btn.textContent;
+    btn.textContent = '✓ Copied!';
+    setTimeout(() => { btn.textContent = original; }, 2000);
+  });
+}
+
 // ---- Consent ----
 document.querySelectorAll('.consent-check').forEach(cb => {
   cb.addEventListener('change', () => {
@@ -322,7 +447,7 @@ document.getElementById('btnStartPretest').addEventListener('click', async () =>
 function renderPretestEmail() {
   const e = pretestEmails[pretestIdx];
   document.getElementById('pretestBadge').textContent = `Email ${pretestIdx + 1} of ${pretestEmails.length}`;
-  document.getElementById('pretestEmailText').textContent = e.text;
+  renderEmailChrome('pretestEmailContainer', e);
   document.getElementById('pretestConfidenceCard').classList.add('hidden');
   document.querySelectorAll('#pretestConfidence input').forEach(r => r.checked = false);
 }
@@ -365,7 +490,7 @@ function startToolInteraction() {
 async function renderToolEmail() {
   const e = pretestEmails[toolIdx];
   document.getElementById('toolBadge').textContent = `Tool result ${toolIdx + 1} of ${pretestEmails.length}`;
-  document.getElementById('toolEmailText').textContent = e.text;
+  renderEmailChrome('toolEmailContainer', e);
   document.getElementById('toolLoading').classList.remove('hidden');
   document.getElementById('toolResultBox').classList.add('hidden');
   document.getElementById('btnToolNext').classList.add('hidden');
@@ -376,7 +501,8 @@ async function renderToolEmail() {
   });
   const data = await res.json();
   document.getElementById('toolLoading').classList.add('hidden');
-  document.getElementById('toolVerdict').textContent = `Tool verdict: ${data.verdict} (${Math.round(data.confidence * 100)}% confidence)`;
+  const icon = data.verdict === 'Phishing' ? '🎣' : '✅';
+  document.getElementById('toolVerdict').textContent = `${icon} Tool verdict: ${data.verdict} (${Math.round(data.confidence * 100)}% confidence)`;
   document.getElementById('toolSummary').textContent = data.summary;
   document.getElementById('toolResultBox').classList.remove('hidden');
   document.getElementById('btnToolNext').classList.remove('hidden');
@@ -420,7 +546,7 @@ async function verifyCode() {
 function renderPosttestEmail() {
   const e = posttestEmails[posttestIdx];
   document.getElementById('posttestBadge').textContent = `Email ${posttestIdx + 1} of ${posttestEmails.length}`;
-  document.getElementById('posttestEmailText').textContent = e.text;
+  renderEmailChrome('posttestEmailContainer', e);
   document.getElementById('posttestConfidenceCard').classList.add('hidden');
   document.querySelectorAll('#posttestConfidence input').forEach(r => r.checked = false);
 }
